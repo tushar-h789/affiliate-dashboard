@@ -1,0 +1,71 @@
+ :root {
+      --bg-body: #1e1e1e;
+  --bg-card: #2a2a2a;
+  --text-primary: #f7f7f7;
+  --text-secondary: #d8d8d8;
+  --bg-input: #1c1c1c;
+  --btn-bg: #323738;
+  --btn-bg-hover: #444444;
+  --input-bg-color: #232626;
+  --total--color: #AAAAAA;
+    }
+
+    .total-reward {
+    
+      font-family: Arial, sans-serif;
+      display: flex;
+      
+      /* justify-content: center; */
+      padding: 8px 14px;
+    }
+
+    .total-card {
+      background: var(--btn-bg);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      padding: 24px 0px;
+      width: 100%;
+      max-width: 360px; /* mobile width */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      
+    }
+
+    .total-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex: 1;
+    }
+
+    .total-img{
+        width: 24px;
+        height: 24px;
+    }
+
+    .total-item i {
+      font-size: 24px;
+      color: var(--highlight);
+      margin-bottom: 4px;
+    }
+
+    .total-label {
+      font-size: 14px;
+      color: var(--total--color);
+      margin: 12px;
+    }
+
+    .commision{
+        align-items: start;
+    }
+ 
+
+    .total-value {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .commision-value{
+        text-align: start;
+    }
