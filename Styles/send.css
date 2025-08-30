@@ -4,7 +4,7 @@
 .send {
   /* background: #1e1e1e; */
   font-family: Arial, sans-serif;
-  margin: 14px; /* Changed from 12px to match other sections */
+  margin: 14px; 
   justify-content: center;
   align-items: center;
 }
@@ -23,7 +23,7 @@
 .send-card {
   background: var(--btn-bg);
   color: var(--text-primary);
-  width: 88%; /* Changed from 350px to be responsive like other sections */
+  width: 100%; /* Changed from 350px to be responsive like other sections */
   padding: 20px;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
