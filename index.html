@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Affiliate Card</title>
+    <link rel="stylesheet" href="Styles/affiliate-card.css" />
+    <link rel="stylesheet" href="Styles/live-reword.css" />
+    <link rel="stylesheet" href="Styles/send.css" />
+    <link rel="stylesheet" href="Styles/faq.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="affiliate card">
+        <!-- Header with Back Arrow -->
+
+        <!-- Live Rewards Section -->
+        <div class="live-rewards">
+          <div class="live-header">
+            <span class="live-icon">
+              <img src="assets/image/live-icon.png" alt="" />
+            </span>
+            <h3>Live Rewards</h3>
+          </div>
+
+          <div class="live-summary">
+            <span
+              >Total Rewards Sent To- <br />
+              Date</span
+            >
+            <span class="live-amount">BDT 341, 20.46K</span>
+          </div>
+
+          <div class="live-list" id="liveList">
+            <div class="live-scroll-container" id="scrollContainer">
+              <!-- First set of rows -->
+              <div class="live-row">
+                <p>Anana blue <b>+7</b><span>T</span></p>
+                <p>Anana blue <b>+7</b><span>T</span></p>
+                <p>Mannu <b>+7</b><span>T</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Sakib Khan <b>+12</b><span>G</span></p>
+                <p>Rima <b>+5</b><span>S</span></p>
+                <p>John <b>+8</b><span>B</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Maria <b>+15</b><span>D</span></p>
+                <p>Ahmed <b>+3</b><span>C</span></p>
+                <p>Lisa <b>+9</b><span>H</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Rahman <b>+6</b><span>F</span></p>
+                <p>Fatima <b>+11</b><span>R</span></p>
+                <p>David <b>+4</b><span>P</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Nasir <b>+13</b><span>M</span></p>
+                <p>Sumon <b>+2</b><span>L</span></p>
+                <p>Rashid <b>+10</b><span>K</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Ayesha <b>+9</b><span>A</span></p>
+                <p>Karim <b>+14</b><span>K</span></p>
+                <p>Nadia <b>+6</b><span>N</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Rahim <b>+8</b><span>R</span></p>
+                <p>Sadia <b>+11</b><span>S</span></p>
+                <p>Hasan <b>+5</b><span>H</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Marium <b>+16</b><span>M</span></p>
+                <p>Tanvir <b>+7</b><span>T</span></p>
+                <p>Ruhul <b>+12</b><span>R</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Shiuli <b>+4</b><span>S</span></p>
+                <p>Babul <b>+13</b><span>B</span></p>
+                <p>Nasreen <b>+9</b><span>N</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Khalil <b>+10</b><span>K</span></p>
+                <p>Rashida <b>+8</b><span>R</span></p>
+                <p>Shamim <b>+15</b><span>S</span></p>
+              </div>
+
+              <!-- Duplicate set for seamless loop -->
+              <div class="live-row">
+                <p>Anana blue <b>+7</b><span>T</span></p>
+                <p>Anana blue <b>+7</b><span>T</span></p>
+                <p>Mannu <b>+7</b><span>T</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Sakib Khan <b>+12</b><span>G</span></p>
+                <p>Rima <b>+5</b><span>S</span></p>
+                <p>John <b>+8</b><span>B</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Maria <b>+15</b><span>D</span></p>
+                <p>Ahmed <b>+3</b><span>C</span></p>
+                <p>Lisa <b>+9</b><span>H</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Rahman <b>+6</b><span>F</span></p>
+                <p>Fatima <b>+11</b><span>R</span></p>
+                <p>David <b>+4</b><span>P</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Nasir <b>+13</b><span>M</span></p>
+                <p>Sumon <b>+2</b><span>L</span></p>
+                <p>Rashid <b>+10</b><span>K</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Ayesha <b>+9</b><span>A</span></p>
+                <p>Karim <b>+14</b><span>K</span></p>
+                <p>Nadia <b>+6</b><span>N</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Rahim <b>+8</b><span>R</span></p>
+                <p>Sadia <b>+11</b><span>S</span></p>
+                <p>Hasan <b>+5</b><span>H</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Marium <b>+16</b><span>M</span></p>
+                <p>Tanvir <b>+7</b><span>T</span></p>
+                <p>Ruhul <b>+12</b><span>R</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Shiuli <b>+4</b><span>S</span></p>
+                <p>Babul <b>+13</b><span>B</span></p>
+                <p>Nasreen <b>+9</b><span>N</span></p>
+              </div>
+
+              <div class="live-row">
+                <p>Khalil <b>+10</b><span>K</span></p>
+                <p>Rashida <b>+8</b><span>R</span></p>
+                <p>Shamim <b>+15</b><span>S</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learn more about our Affiliate Program -->
+        <div class="affiliate-card-bdt">
+          <h3 class="learn-title">
+            Learn more about our <br />
+            <span>Affiliate Program</span>
+          </h3>
+
+          <div class="bdt-image-box">
+            <img src="assets/image/affiliate-program.png" alt="100 Mil Reais" />
+          </div>
+          <p class="learn-subtitle">
+            Contrary to popular belief, Lorem Ipsum is not simply random text.
+            It has roots in a piece of classical Latin literature from 45 BC,
+            making it over 2000 years old. Richard McClintock, a Latin professor
+            at Hampden-Sydney College in Virginia,
+          </p>
+
+          <div class="send-input-row">
+            <input
+              class="send-input-text"
+              type="business@rb.game"
+              placeholder="business@rb.game"
+            />
+            <button class="send-btn">Send Now</button>
+          </div>
+        </div>
+
+        <!-- send section -->
+        <section class="send">
+          <div class="send-card">
+            <div class="send-row">
+              <img
+                src="assets/image/Whatsapp.png"
+                alt="whatsapp"
+                class="whatsapp-logo"
+              />
+
+              <div class="send-desc">
+                <div class="send-title">Whatsapp</div>
+                <div>
+                  Tap “Send Now” for deals on <br />
+                  WhatsApp. Fast & trusted service!
+                </div>
+              </div>
+            </div>
+            <div class="send-input-row">
+              <input
+                class="send-input-text"
+                type="send-text"
+                placeholder="send offer"
+              />
+              <button class="send-btn">Send Now</button>
+            </div>
+          </div>
+          <div class="send-card">
+            <div class="send-row">
+              <img
+                src="assets/image/Telegram.png"
+                alt="whatsapp"
+                class="whatsapp-logo"
+              />
+
+              <div class="send-desc">
+                <div class="send-title">Telegram</div>
+                <div>
+                  Tap “Send Now” to get deals on <br />
+                  Telegram. Fast & secure service!
+                </div>
+              </div>
+            </div>
+            <div class="send-input-row">
+              <input
+                class="send-input-text"
+                type="send-text"
+                placeholder="send offer"
+              />
+              <button class="send-btn">Send Now</button>
+            </div>
+          </div>
+          <div class="send-card">
+            <div class="send-row">
+              <img
+                src="assets/image/Frame.png"
+                alt="whatsapp"
+                class="whatsapp-logo"
+              />
+
+              <div class="send-desc">
+                <div class="send-title">Email</div>
+                <div class="send-descrip">
+                  Tap “Send Now” to email us for the best deals. Quick reply!
+                </div>
+              </div>
+            </div>
+            <div class="send-input-row">
+              <input
+                class="send-input-text"
+                type="send-text"
+                placeholder="send offer"
+              />
+              <button class="send-btn">Send Now</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- faq section -->
+        <section class="faq" aria-labelledby="faq__heading">
+          <div class="faq__container">
+            <h2 id="faq__heading" class="faq__title">Learn more about our</h2>
+
+            <div class="faq__panel" role="list">
+              <!-- Item 1 (open) -->
+              <details class="faq-item" open>
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >How does the referral system work?</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    When you share your referral link with any of your friends,
+                    family or advertise the link and a player signs up at our
+                    site that player becomes your referral and they will earn
+                    you commission & extra rewards by playing at BC.GAME.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Item 2 -->
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >Here are many variations of ?</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    Engage in chat conversations throughout the day to receive
+                    free coins as part of the Constant Chat Rains bonus. <br />
+                    Rules: <br />
+                    There are many variations of online casino games including
+                    slots, table games, live dealer experiences, and special
+                    promotions tailored to different player preferences.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Item 3 -->
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >Comes from a line in section</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    This information comes directly from our promotions and
+                    bonus section, where we clearly outline how each offer works
+                    and what benefits players can claim
+                  </p>
+                </div>
+              </details>
+
+              <!-- Item 4 -->
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >How does the referral system work ?</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    You may tip other players once you reach VIP Level 8.
+                    Tipping is how you show appreciation and share your
+                    generosity with other players in BC.GAME. You can decide how
+                    much you want to send to the other players.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Item 5 -->
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >Here are many variations of ?</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    There are many variations of online casino games including
+                    slots, table games, live dealer experiences, and special
+                    promotions tailored to different player preferences.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Item 6 -->
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >How does the referral system work ?</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    When you share your referral link and a friend registers and
+                    plays, they become your referral. You earn commissions and
+                    extra rewards based on their activity on our platform.
+                  </p>
+                </div>
+              </details>
+
+              <!-- Item 7 -->
+              <details class="faq-item">
+                <summary class="faq-item__summary">
+                  <span class="faq-item__question"
+                    >What is ‘Sports Weekly Bonus’?</span
+                  >
+                  <span class="faq-item__chevron" aria-hidden="true"></span>
+                </summary>
+                <div class="faq-item__content">
+                  <p>
+                    The Sports Weekly Bonus is a special reward for players who
+                    place sports bets throughout the week, giving them cashback
+                    or free bet opportunities every week.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script>
+      // Simple continuous scroll - always visible content
+      const scrollContainer = document.getElementById("scrollContainer");
+
+      // Sample data for generating new rows
+      const sampleNames = [
+        "Anana blue",
+        "Sakib Khan",
+        "Rima",
+        "John",
+        "Maria",
+        "Ahmed",
+        "Lisa",
+        "Rahman",
+        "Fatima",
+        "David",
+        "Nasir",
+        "Sumon",
+        "Rashid",
+        "Ayesha",
+        "Karim",
+        "Nadia",
+        "Rahim",
+        "Sadia",
+        "Hasan",
+        "Marium",
+        "Tanvir",
+        "Ruhul",
+        "Shiuli",
+        "Babul",
+        "Nasreen",
+        "Khalil",
+        "Rashida",
+        "Shamim",
+      ];
+
+      const sampleLetters = [
+        "T",
+        "G",
+        "S",
+        "B",
+        "D",
+        "C",
+        "H",
+        "F",
+        "R",
+        "P",
+        "M",
+        "L",
+        "K",
+        "A",
+        "N",
+      ];
+
+      function getRandomName() {
+        return sampleNames[Math.floor(Math.random() * sampleNames.length)];
+      }
+
+      function getRandomPoints() {
+        return Math.floor(Math.random() * 20) + 1;
+      }
+
+      function getRandomLetter() {
+        return sampleLetters[Math.floor(Math.random() * sampleLetters.length)];
+      }
+
+      function createNewRow() {
+        const row = document.createElement("div");
+        row.className = "live-row";
+
+        // Create 3 columns with random data
+        for (let i = 0; i < 3; i++) {
+          const p = document.createElement("p");
+          const name = getRandomName();
+          const points = getRandomPoints();
+          const letter = getRandomLetter();
+
+          p.innerHTML = `${name} <b>+${points}</b><span>${letter}</span>`;
+          row.appendChild(p);
+        }
+
+        return row;
+      }
+
+      // Start animation immediately when page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ensure continuous visible scroll
+        scrollContainer.style.animationPlayState = "running";
+
+        // Periodically add new content to keep it fresh
+        setInterval(() => {
+          // Add new rows at the end
+          for (let i = 0; i < 3; i++) {
+            const newRow = createNewRow();
+            scrollContainer.appendChild(newRow);
+          }
+
+          // Keep performance optimal by limiting total rows
+          const rows = scrollContainer.querySelectorAll(".live-row");
+          while (rows.length > 40) {
+            rows[0].remove();
+            rows = scrollContainer.querySelectorAll(".live-row");
+          }
+        }, 8000); // Add new content every 8 seconds
+      });
+    </script>
+  </body>
+</html>
