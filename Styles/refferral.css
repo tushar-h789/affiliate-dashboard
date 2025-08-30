@@ -1,0 +1,42 @@
+ :root {
+      --bg-body: #1e1e1e;
+  --bg-card: #2a2a2a;
+  --text-primary: #f7f7f7;
+  --text-secondary: #FFFFFF;
+  --bg-input: #1c1c1c;
+  --btn-bg: #323738;
+  --btn-bg-hover: #444444;
+  --input-bg-color: #232626;
+  --total--color: #AAAAAA;
+    }
+
+    .referral {
+    
+      font-family: Arial, sans-serif;
+      display: flex;
+      /* justify-content: center; */
+      padding: 4px 14px;
+    }
+
+    .referral-card {
+      background: var(--btn-bg);
+      border-radius: 8px;
+      padding: 2px 0px 36px;
+      width: 100%;
+      max-width: 360px; /* mobile width */
+    
+      
+    }
+
+    .referral-title{
+        font-size: 16px;
+        color: var(--text-secondary);
+        text-align: start;
+        margin-left: 16px;
+        margin-bottom: 74px;
+    }
+
+    .referral-dec{
+        font-size: 14px;
+        color: var(--text-secondary);
+    }
