@@ -35,6 +35,7 @@
   --invite-friend-color: #24ee87;
   --gray-color: #aaaaaa;
   --link-bg: #232626;
+  --text-color: #e9e9e9;
 
   /* Slide Placeholder Colors */
   --slide-1-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -325,4 +326,20 @@
   background: var(--link-bg);
   padding: 12px 14px;
   border-radius: 8px;
+}
+
+.share-link-container button {
+  margin-top: 12px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background: var(--card-bg);
+  color: var(--text-color);
+  /* border: none;  */
+  cursor: pointer;
+}
+
+.share-link-container button:hover {
+  background: var(--accent-color);
+  color: #000;
 }
