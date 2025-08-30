@@ -34,6 +34,7 @@
   --card-bg: #323738;
   --invite-friend-color: #24ee87;
   --gray-color: #aaaaaa;
+  --link-bg: #232626;
 
   /* Slide Placeholder Colors */
   --slide-1-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -307,4 +308,21 @@
 
 .slide:nth-child(4) .slide-placeholder {
   background: var(--slide-4-bg);
+}
+
+.share-link-container {
+  margin-top: 20px;
+}
+
+.share-link-img {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.share-link-container img {
+  background: var(--link-bg);
+  padding: 12px 14px;
+  border-radius: 8px;
 }
