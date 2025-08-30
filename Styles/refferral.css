@@ -20,6 +20,7 @@
 
     .referral-card {
       background: var(--btn-bg);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       padding: 2px 0px 36px;
       width: 100%;

@@ -14,12 +14,14 @@
     
       font-family: Arial, sans-serif;
       display: flex;
+      
       /* justify-content: center; */
       padding: 8px 14px;
     }
 
     .total-card {
       background: var(--btn-bg);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
       border-radius: 8px;
       padding: 24px 0px;
       width: 100%;
