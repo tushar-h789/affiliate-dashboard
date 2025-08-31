@@ -25,7 +25,7 @@
       border-radius: 8px;
       padding: 24px 0px;
       width: 100%;
-      max-width: 360px; /* mobile width */
+      max-width: 768px; /* mobile width */
       display: flex;
       justify-content: space-between;
       align-items: center;
