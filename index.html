@@ -64,8 +64,8 @@
           </div>
 
           <!-- Navigation Arrows -->
-          <div class="nav-arrow left" onclick="previousSlide()">❮</div>
-          <div class="nav-arrow right" onclick="nextSlide()">❯</div>
+          <!-- <div class="nav-arrow left" onclick="previousSlide()">❮</div>
+          <div class="nav-arrow right" onclick="nextSlide()">❯</div> -->
         </div>
 
         <!-- Dots Navigation -->
@@ -76,23 +76,70 @@
           <div class="dot" onclick="goToSlide(3)"></div>
         </div>
 
-        <div class="slider-card-container">
+        <!-- menu bar section -->
+        <!-- <div class="slider-card-container">
           <div class="slider-card">
             <img src="assets/image/Home.png" alt="" />
             <p>Dashboard</p>
           </div>
           <div class="slider-card">
             <img src="assets/image/recent.png" alt="" />
-            <p>Recent Big Wins</p>
+            <p>My Rewards</p>
           </div>
           <div class="slider-card">
             <img src="assets/image/rb.png" alt="" />
-            <p>RB Originals</p>
+            <p>Referral Cods and friends </p>
+          </div>
+          <div class="slider-card">
+            <img src="assets/image/rb.png" alt="" />
+            <p>Rate & Rules </p>
+          </div>
+        </div> -->
+
+        <!-- Tab Navigation (Scrollable Menu Bar) -->
+        <div class="tab-navigation">
+          <div class="tab-item active" onclick="showTab('dashboard')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+            </svg>
+            <p>Dashboard</p>
+          </div>
+          <div class="tab-item" onclick="showTab('rewards')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+              />
+            </svg>
+            <p>My Rewards</p>
+          </div>
+          <div class="tab-item" onclick="showTab('referrals')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.06 7H16.5c-.83 0-1.5-.67-1.5-1.5S15.67 4 16.5 4h2c1.1 0 2 .9 2 2 0 .74-.4 1.38-1 1.73V22h-1zm-12.5 0c-.83 0-1.5-.67-1.5-1.5S6.67 19 7.5 19s1.5.67 1.5 1.5S8.33 22 7.5 22zm3-7H8l1.38-4.5H11V22h-1zm6-9H9.5c-.83 0-1.5.67-1.5 1.5S8.67 8 9.5 8H16v-1z"
+              />
+            </svg>
+            <p>Referral Codes & Friends</p>
+          </div>
+          <div class="tab-item" onclick="showTab('rates')">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
+              />
+            </svg>
+            <p>Rate & Rules</p>
           </div>
         </div>
 
+        <!-- Tab Content -->
+        
+        
+
+
+         <!-- My Rewards Tab -->
+        <div id="dashboard" class="tab-content">
+          <!-- Dashboard Tab start -->
         <!-- Learn more about our Affiliate Program -->
-        <div class="affiliate-card-bdt">
+        <div id="dashboard"  class="affiliate-card-bdt tab-content">
           <h3 class="learn-title">
             Invite Friend to Get <br />
             <!-- <span>Affiliate Program</span> -->
@@ -573,10 +620,323 @@
             </div>
           </div>
         </section>
+        <!-- Dashboard tab section end -->
+        </div>
+
+
+         <!-- My Rewards Tab -->
+        <div id="rewards" class="tab-content">
+          <!-- total reward section -->
+          <div class="total-reward">
+            <div class="total-card">
+              <div class="total-item">
+                <img class="total-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo=" alt="" />
+                <div class="total-label">Total Reward</div>
+                <div class="total-value">$0.00</div>
+              </div>
+              <div class="total-item">
+                <img class="total-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4K" alt="" />
+                <div class="total-label">Total Friend</div>
+                <div class="total-value">0</div>
+              </div>
+            </div>
+          </div>
+          <div class="total-reward">
+            <div class="total-card commision">
+              <div class="total-item">
+                <img class="total-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo=" alt="" />
+                <div class="total-label">Referral Reward</div>
+                <div class="total-value">$0.00</div>
+              </div>
+              <div class="total-item">
+                <img class="total-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo=" alt="" />
+                <div class="total-label">Commission Reward</div>
+                <div class="total-value">$0.00</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- refferal activitise section -->
+          <div class="referral">
+            <div class="referral-card">
+              <h4 class="referral-title">My Reward Activities</h4>
+              <div>
+                <img class="referral-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo=" alt="" />
+                <p class="referral-dec">No rewards yet</p>
+                <p class="referral-dec">Start earning rewards now!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Referral Codes & Friends Tab -->
+        <div id="referrals" class="tab-content">
+          <div class="affiliate-card-bdt">
+            <h3 class="learn-title">
+              Referral Codes & <br />
+              <span>Friends Management</span>
+            </h3>
+
+            <div class="refrerral-container">
+              <h2>My Referral Code</h2>
+              <div class="send-input-row">
+                <input
+                  class="send-input-text"
+                  type="text"
+                  value="REF32G5TRG"
+                  readonly
+                />
+                <button class="send-btn">Copy</button>
+              </div>
+            </div>
+
+            <div class="refrerral-container">
+              <h2>Generate New Code</h2>
+              <div class="send-input-row">
+                <input
+                  class="send-input-text"
+                  type="text"
+                  placeholder="Enter custom code (optional)"
+                />
+                <button class="send-btn">Generate</button>
+              </div>
+            </div>
+
+            <div class="bdt-image-box">
+              <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDIwMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTIwIiBmaWxsPSIjMDBmZjg4IiBvcGFjaXR5PSIwLjEiLz4KPHN2ZyB4PSI4NSIgeT0iNDUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMDBmZjg4Ij4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4KPC9zdmc+Cg==" alt="Friends Network" />
+            </div>
+
+            <p class="learn-subtitle">
+              Manage your referral codes and track your friends' activities. You can 
+              generate multiple codes for different campaigns and see detailed statistics 
+              for each one.
+            </p>
+          </div>
+
+          <!-- Friends List -->
+          <div class="referral">
+            <div class="referral-card">
+              <h4 class="referral-title">My Friends</h4>
+              <div>
+                <img class="referral-img" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4K" alt="" />
+                <p class="referral-dec">No friends referred yet</p>
+                <p class="referral-dec">Share your code to start earning!</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Rate & Rules Tab -->
+        <div id="rates" class="tab-content">
+          <!-- FAQ section for rates and rules -->
+          <section class="faq" aria-labelledby="faq__heading">
+            <div class="faq__container">
+              <h2 id="faq__heading" class="faq__title">Rates & Rules</h2>
+
+              <div class="faq__panel" role="list">
+                <!-- Item 1 (open) -->
+                <details class="faq-item" open>
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Commission Rates Structure</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      Tier 1: 10% commission on first $1,000 wagered<br/>
+                      Tier 2: 15% commission on $1,001 - $5,000 wagered<br/>
+                      Tier 3: 20% commission on $5,001 - $10,000 wagered<br/>
+                      Tier 4: 25% commission on $10,000+ wagered
+                    </p>
+                  </div>
+                </details>
+
+                <!-- Item 2 -->
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Referral Bonus Rules</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      $1250 bonus paid when referred friend makes their first deposit of $100 or more and places at least $500 in bets within 30 days. Bonus is paid within 48 hours of qualifying activity completion.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- Item 3 -->
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Payment Schedule</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      Commissions are calculated weekly (Sunday to Saturday) and paid out every Tuesday. Minimum payout threshold is $50. Payments are made via the same method as your account deposits.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- Item 4 -->
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Tracking & Attribution</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      Referrals are tracked using cookies (30-day expiry) and referral codes (permanent attribution). If a user clicks your link and signs up within 30 days, you get credit even without using your code.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- Item 5 -->
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Terms & Restrictions</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      Self-referrals, fake accounts, and duplicate accounts are strictly prohibited. Spamming or using misleading advertising may result in account suspension. All referred users must be 18+ and comply with local gambling laws.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- Item 6 -->
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Geographic Restrictions</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      Referral program is available in all supported countries. However, commission rates may vary by region due to local regulations. Check your account dashboard for region-specific rates.
+                    </p>
+                  </div>
+                </details>
+
+                <!-- Item 7 -->
+                <details class="faq-item">
+                  <summary class="faq-item__summary">
+                    <span class="faq-item__question"
+                      >Dispute Resolution</span
+                    >
+                    <span class="faq-item__chevron" aria-hidden="true"></span>
+                  </summary>
+                  <div class="faq-item__content">
+                    <p>
+                      Any disputes regarding referral attribution or commission calculations must be reported within 7 days. Our support team will investigate and resolve issues within 5 business days.
+                    </p>
+                  </div>
+                </details>
+              </div>
+            </div>
+
+
       </div>
     </div>
 
     <script>
+
+(function () {
+  const nav = document.querySelector('.tab-navigation');
+  if (!nav) return;
+
+  // Convert mouse wheel vertical -> horizontal
+  nav.addEventListener('wheel', (e) => {
+    if (e.shiftKey) return;
+    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+      e.preventDefault();
+      nav.scrollLeft += e.deltaY;
+    }
+  }, { passive: false });
+
+  // Click-drag to scroll
+  let isDown = false, startX = 0, startLeft = 0;
+  nav.addEventListener('mousedown', (e) => {
+    isDown = true;
+    nav.classList.add('dragging');
+    startX = e.pageX;
+    startLeft = nav.scrollLeft;
+  });
+  window.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    nav.scrollLeft = startLeft - (e.pageX - startX);
+  });
+  window.addEventListener('mouseup', () => {
+    isDown = false;
+    nav.classList.remove('dragging');
+  });
+
+  // Touch drag (mobile)
+  let tX = 0, tLeft = 0;
+  nav.addEventListener('touchstart', (e) => {
+    const t = e.touches[0];
+    tX = t.clientX; tLeft = nav.scrollLeft;
+  }, { passive: true });
+  nav.addEventListener('touchmove', (e) => {
+    const t = e.touches[0];
+    nav.scrollLeft = tLeft - (t.clientX - tX);
+  }, { passive: true });
+
+  // When a tab is clicked, bring it into view (center-ish)
+  nav.addEventListener('click', (e) => {
+    const item = e.target.closest('.tab-item');
+    if (item) item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  });
+})();
+
+
+      // Tab functionality
+      function showTab(tabName) {
+  // Hide all tab contents
+  const tabContents = document.querySelectorAll('.tab-content');
+  tabContents.forEach(content => {
+    content.classList.remove('active');
+  });
+
+  // Remove active class from all tab items
+  const tabItems = document.querySelectorAll('.tab-item');
+  tabItems.forEach(item => {
+    item.classList.remove('active');
+  });
+
+  // Show selected tab content
+  const selectedTab = document.getElementById(tabName);
+  if (selectedTab) {
+    selectedTab.classList.add('active');
+  }
+
+  // 👇 NEW: Activate the correct tab item without relying on `event`
+  const clickedTab = document.querySelector(`.tab-item[onclick*="${tabName}"]`);
+  if (clickedTab) {
+    clickedTab.classList.add('active');
+  }
+}
+
+// ✅ ADD this one line inside your existing DOMContentLoaded callback (at the top)
+document.addEventListener("DOMContentLoaded", function () {
+  // Open Dashboard by default on first load
+  showTab('dashboard');
+
+  // ... keep your existing code below
+  // Ensure continuous visible scroll
+  scrollContainer.style.animationPlayState = "running";
+  });
+
       // Simple continuous scroll - always visible content
       const scrollContainer = document.getElementById("scrollContainer");
 
@@ -723,6 +1083,24 @@
 
       // Initialize slider
       updateSlider();
+
+      // Copy functionality for input fields
+      document.addEventListener('click', function(e) {
+        if (e.target.classList.contains('send-btn') && e.target.textContent === 'Copy') {
+          const input = e.target.previousElementSibling;
+          if (input && input.classList.contains('send-input-text')) {
+            input.select();
+            document.execCommand('copy');
+            
+            // Provide visual feedback
+            const originalText = e.target.textContent;
+            e.target.textContent = 'Copied!';
+            setTimeout(() => {
+              e.target.textContent = originalText;
+            }, 2000);
+          }
+        }
+      });
     </script>
   </body>
 </html>
