@@ -61,7 +61,7 @@ body {
     var(--card-bg-bottom) 100%
   );
   border-radius: var(--card-radius);
-  width: 375px;
+  max-width: 768px;
   text-align: center;
   padding: 0 0 20px; /* 🔹 no top/side padding */
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
