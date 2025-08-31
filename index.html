@@ -808,20 +808,98 @@
           </div>
 
           <!-- My Rewards Sub-tab Content -->
+          <!-- commission by friends -->
           <div id="commisionByFriends" class="tab-content sub-tab active">
-            <div class="content-section">
-              <h3>Commission by Friends</h3>
-              <p>
-                View your commission earnings broken down by each friend you've
-                referred.
-              </p>
+            <div class="commission-wrap">
+              <!-- Controls: dropdown + search -->
+              <div class="commission-toolbar">
+                <button class="commission-select">
+                  <span>All Codes</span>
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M6 9l6 6 6-6"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div class="commission-search">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <circle
+                      cx="11"
+                      cy="11"
+                      r="7"
+                      stroke="currentColor"
+                      stroke-width="2"
+                    />
+                    <path
+                      d="M20 20l-3.5-3.5"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                  <input type="text" placeholder="Search UserName" />
+                </div>
+              </div>
+
+              <!-- Filter chips -->
+              <div class="commission-chips">
+                <div class="commission-chip">
+                  <span class="commission-chip-label"
+                    >Registration Date:&nbsp;<b>All Range</b></span
+                  >
+                  <button class="commission-chip-close" aria-label="Remove">
+                    ×
+                  </button>
+                </div>
+
+                <div class="commission-chip">
+                  <span class="commission-chip-label"
+                    >Wager Date:&nbsp;<b>2025/06/03–2025/09/01</b></span
+                  >
+                </div>
+              </div>
+
+              <!-- Table header -->
+              <div class="commission-table">
+                <div class="commission-table-head">
+                  <span>Username</span>
+                  <span>Total Commission</span>
+                </div>
+                <div class="commission-divider"></div>
+
+                <!-- Empty state -->
+                <div class="commission-empty">
+                  <img
+                    src="assets/image/not-find-img.png"
+                    alt="No rewards illustration"
+                  />
+                  <p>No rewards yet invite friends to join you now!</p>
+                </div>
+              </div>
             </div>
           </div>
 
           <div id="commissionByCurrency" class="tab-content sub-tab">
-            <div class="content-section">
-              <h3>Commission by Currency</h3>
-              <p>See your commissions categorized by currency type.</p>
+            <div class="commission-empty">
+              <img src="assets/image/not-find-img.png" alt="" />
+              <p>No rewards yet invite friends to join you now!</p>
             </div>
           </div>
 
