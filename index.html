@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="Styles/live-reword.css" />
     <link rel="stylesheet" href="Styles/send.css" />
     <link rel="stylesheet" href="Styles/faq.css" />
+    <link rel="stylesheet" href="Styles/slider.css" />
     <link rel="stylesheet" href="Styles/total-reward.css" />
-    <link rel="stylesheet" href="Styles/refferral.css">
+    <link rel="stylesheet" href="Styles/refferral.css" />
   </head>
   <body>
     <div class="container">
@@ -26,11 +27,134 @@
           <h2>Affiliate</h2>
         </div>
 
+        <!-- Slider Section -->
+        <div class="slider-container">
+          <div class="slider-track" id="sliderTrack">
+            <!-- Slide 1 -->
+            <div class="slide">
+              <!-- Replace with your actual image -->
+              <div class="slide-placeholder">
+                <img src="assets/image/slider-01.png" alt="slider 1" />
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+              <!-- Replace with your actual image -->
+              <div class="slide-placeholder">
+                <img src="assets/image/slider-02.jpg" alt="slider 2" />
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+              <!-- Replace with your actual image -->
+              <div class="slide-placeholder">
+                <img src="assets/image/slider-03.jpg" alt="slider 3" />
+              </div>
+            </div>
+
+            <!-- Slide 4 -->
+            <div class="slide">
+              <!-- Replace with your actual image -->
+              <div class="slide-placeholder">
+                <img src="assets/image/slider-04.webp" alt="slider 4" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Arrows -->
+          <div class="nav-arrow left" onclick="previousSlide()">❮</div>
+          <div class="nav-arrow right" onclick="nextSlide()">❯</div>
+        </div>
+
+        <!-- Dots Navigation -->
+        <div class="dots-container" id="dotsContainer">
+          <div class="dot active" onclick="goToSlide(0)"></div>
+          <div class="dot" onclick="goToSlide(1)"></div>
+          <div class="dot" onclick="goToSlide(2)"></div>
+          <div class="dot" onclick="goToSlide(3)"></div>
+        </div>
+
+        <div class="slider-card-container">
+          <div class="slider-card">
+            <img src="assets/image/Home.png" alt="" />
+            <p>Dashboard</p>
+          </div>
+          <div class="slider-card">
+            <img src="assets/image/recent.png" alt="" />
+            <p>Recent Big Wins</p>
+          </div>
+          <div class="slider-card">
+            <img src="assets/image/rb.png" alt="" />
+            <p>RB Originals</p>
+          </div>
+        </div>
+
+        <!-- Learn more about our Affiliate Program -->
+        <div class="affiliate-card-bdt">
+          <h3 class="learn-title">
+            Invite Friend to Get <br />
+            <!-- <span>Affiliate Program</span> -->
+          </h3>
+          <div class="invite-friend">
+            <p>$1250 +25%</p>
+            <p>+25%</p>
+          </div>
+          <div class="invite-friend-title">
+            <p>Referral Rewards</p>
+            <p>Commission Rewards</p>
+          </div>
+
+          <p class="learn-subtitle">
+            Get $1250 for each friend you invite, plus up to 25% commission on
+            their wagers. Enjoy consistent commission, whether they win or lose,
+            in our Casino and Sportsbook. Start earning now!
+          </p>
+
+          <div class="refrerral-container">
+            <h2>Referral Link</h2>
+            <div class="send-input-row">
+              <input
+                class="send-input-text"
+                type="text"
+                placeholder="https//: rellbet.com/i-...o-n/"
+              />
+              <button class="send-btn">Copy</button>
+            </div>
+          </div>
+
+          <div class="refrerral-container">
+            <h2>Referral Code</h2>
+            <div class="send-input-row">
+              <input
+                class="send-input-text"
+                type="text"
+                placeholder="32g5trg"
+              />
+              <button class="send-btn">Copy</button>
+            </div>
+          </div>
+
+          <div class="share-link-container">
+            <p>Share via social</p>
+            <div class="share-link-img">
+              <img src="assets/image/fb.png" alt="" />
+              <img src="assets/image/wp.png" alt="" />
+              <img src="assets/image/in.png" alt="" />
+              <img src="assets/image/x.png" alt="" />
+              <img src="assets/image/tel.png" alt="" />
+              <img src="assets/image/yb.png" alt="" />
+            </div>
+            <button>Referral Terms & Conditions</button>
+          </div>
+        </div>
+
         <!-- total reward section -->
         <div class="total-reward">
           <div class="total-card">
             <div class="total-item">
-              <img class="total-img" src="assets/Frame.png" alt="" />
+              <img class="total-img" src="assets/man.png" alt="" />
               <div class="total-label">Total Reward</div>
               <div class="total-value">$0.00</div>
             </div>
@@ -45,31 +169,31 @@
           <div class="total-card commision">
             <div class="total-item">
               <img class="total-img" src="assets/Frame (2).png" alt="" />
-              <div class="total-label ">Referral Reward</div>
+              <div class="total-label">Referral Reward</div>
               <div class="total-value">$0.00</div>
             </div>
             <div class="total-item">
               <img class="total-img" src="assets/Frame (3).png" alt="" />
-              <div class="total-label ">Commission Reward</div>
+              <div class="total-label">Commission Reward</div>
               <div class="total-value">$0.00</div>
             </div>
           </div>
         </div>
 
         <!-- refferal activitise section -->
-         <div class="referral">
+        <div class="referral">
           <div class="referral-card">
             <h4 class="referral-title">Referral Activities</h4>
             <div>
-              <img class="referral-img" src="assets/Frame (4).png" alt="">
+              <img class="referral-img" src="assets/Frame (4).png" alt="" />
               <p class="referral-dec">No info yet</p>
               <p class="referral-dec">Invite friends join you now!</p>
             </div>
           </div>
-         </div>
+        </div>
 
         <!-- Live Rewards Section -->
-        <div class="live-rewards">
+        <!-- <div class="live-rewards">
           <div class="live-header">
             <span class="live-icon">
               <img src="assets/image/live-icon.png" alt="" />
@@ -87,8 +211,8 @@
 
           <div class="live-list" id="liveList">
             <div class="live-scroll-container" id="scrollContainer">
-              <!-- First set of rows -->
-         <div class="live-row">
+              
+              <div class="live-row">
                 <p>Anana blue <b>+7</b><span>T</span></p>
                 <p>Anana blue <b>+7</b><span>T</span></p>
                 <p>Mannu <b>+7</b><span>T</span></p>
@@ -148,8 +272,8 @@
                 <p>Shamim <b>+15</b><span>S</span></p>
               </div>
 
-              <!-- Duplicate set for seamless loop -->
-        <div class="live-row">
+              
+              <div class="live-row">
                 <p>Anana blue <b>+7</b><span>T</span></p>
                 <p>Anana blue <b>+7</b><span>T</span></p>
                 <p>Mannu <b>+7</b><span>T</span></p>
@@ -210,7 +334,7 @@
               </div>
             </div>
           </div>
-        </div>  
+        </div> -->
 
         <!-- Learn more about our Affiliate Program -->
         <div class="affiliate-card-bdt">
@@ -557,6 +681,48 @@
           }
         }, 8000); // Add new content every 8 seconds
       });
+
+      // Slider section start
+      let currentSlide = 0;
+      const totalSlides = 4;
+
+      function updateSlider() {
+        const sliderTrack = document.getElementById("sliderTrack");
+        const dots = document.querySelectorAll(".dot");
+
+        // Move slider
+        sliderTrack.style.transform = `translateX(-${currentSlide * 25}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function previousSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+      }
+
+      // Auto-play slider every 5 seconds
+      setInterval(nextSlide, 5000);
+
+      // Initialize slider
+      updateSlider();
     </script>
   </body>
 </html>
