@@ -314,9 +314,6 @@
   background: var(--slide-4-bg);
 }
 
-.share-link-container {
-  margin-top: 20px;
-}
 
 .share-link-img {
   display: flex;
@@ -324,11 +321,35 @@
   justify-content: space-between;
   margin-top: 12px;
 }
+.share-link-container {
+  margin-top: 20px;
+}
+
+.share-link-container p {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.share-link-img {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center; /* centers icons on small devices */
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
 
 .share-link-container img {
   background: var(--link-bg);
   padding: 12px 14px;
   border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.share-link-container img:hover {
+  transform: scale(1.05);
 }
 
 .share-link-container button {
@@ -343,9 +364,48 @@
   font-size: 14px;
   font-weight: 500;
   text-align: center;
+  transition: background 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .share-link-container button:hover {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
+}
+
+/* ========================
+   RESPONSIVE BREAKPOINTS
+   ======================== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .share-link-container p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .share-link-container img {
+    padding: 10px 12px;
+  }
+
+  .share-link-container button {
+    font-size: 13px;
+    padding: 9px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .share-link-img {
+    gap: 8px;
+  }
+
+  .share-link-container img {
+    padding: 8px 10px;
+    border-radius: 6px;
+  }
+
+  .share-link-container button {
+    font-size: 12px;
+    padding: 8px;
+  }
 }
