@@ -99,13 +99,17 @@
 
         <!-- Tab Navigation (Scrollable Menu Bar) -->
         <div class="tab-navigation">
-          <div class="tab-item active" onclick="showTab('dashboard')">
+          <div
+            class="tab-item active"
+            data-tab="dashboard"
+            onclick="showTab('dashboard')"
+          >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
             </svg>
             <p>Dashboard</p>
           </div>
-          <div class="tab-item" onclick="showTab('rewards')">
+          <div class="tab-item" data-tab="rewards" onclick="showTab('rewards')">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
@@ -113,7 +117,11 @@
             </svg>
             <p>My Rewards</p>
           </div>
-          <div class="tab-item" onclick="showTab('referrals')">
+          <div
+            class="tab-item"
+            data-tab="referrals"
+            onclick="showTab('referrals')"
+          >
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.06 7H16.5c-.83 0-1.5-.67-1.5-1.5S15.67 4 16.5 4h2c1.1 0 2 .9 2 2 0 .74-.4 1.38-1 1.73V22h-1zm-12.5 0c-.83 0-1.5-.67-1.5-1.5S6.67 19 7.5 19s1.5.67 1.5 1.5S8.33 22 7.5 22zm3-7H8l1.38-4.5H11V22h-1zm6-9H9.5c-.83 0-1.5.67-1.5 1.5S8.67 8 9.5 8H16v-1z"
@@ -121,7 +129,7 @@
             </svg>
             <p>Referral Codes & Friends</p>
           </div>
-          <div class="tab-item" onclick="showTab('rates')">
+          <div class="tab-item" data-tab="rates" onclick="showTab('rates')">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
@@ -271,147 +279,145 @@
 
           <!-- Live Rewards Section -->
           <!-- <div class="live-rewards">
-          <div class="live-header">
-            <span class="live-icon">
-              <img src="assets/image/live-icon.png" alt="" />
-            </span>
-            <h3>Live Rewards</h3>
-          </div>
+            <div class="live-header">
+              <span class="live-icon">
+                <img src="assets/image/live-icon.png" alt="" />
+              </span>
+              <h3>Live Rewards</h3>
+            </div>
 
-          <div class="live-summary">
-            <span
-              >Total Rewards Sent To- <br />
-              Date</span
-            >
-            <span class="live-amount">BDT 341, 20.46K</span>
-          </div>
+            <div class="live-summary">
+              <span
+                >Total Rewards Sent To- <br />
+                Date</span
+              >
+              <span class="live-amount">BDT 341, 20.46K</span>
+            </div>
 
-          <div class="live-list" id="liveList">
-            <div class="live-scroll-container" id="scrollContainer">
-              
-              <div class="live-row">
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Mannu <b>+7</b><span>T</span></p>
-              </div>
+            <div class="live-list" id="liveList">
+              <div class="live-scroll-container" id="scrollContainer">
+                <div class="live-row">
+                  <p>Anana blue <b>+7</b><span>T</span></p>
+                  <p>Anana blue <b>+7</b><span>T</span></p>
+                  <p>Mannu <b>+7</b><span>T</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Sakib Khan <b>+12</b><span>G</span></p>
-                <p>Rima <b>+5</b><span>S</span></p>
-                <p>John <b>+8</b><span>B</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Sakib Khan <b>+12</b><span>G</span></p>
+                  <p>Rima <b>+5</b><span>S</span></p>
+                  <p>John <b>+8</b><span>B</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Maria <b>+15</b><span>D</span></p>
-                <p>Ahmed <b>+3</b><span>C</span></p>
-                <p>Lisa <b>+9</b><span>H</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Maria <b>+15</b><span>D</span></p>
+                  <p>Ahmed <b>+3</b><span>C</span></p>
+                  <p>Lisa <b>+9</b><span>H</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Rahman <b>+6</b><span>F</span></p>
-                <p>Fatima <b>+11</b><span>R</span></p>
-                <p>David <b>+4</b><span>P</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Rahman <b>+6</b><span>F</span></p>
+                  <p>Fatima <b>+11</b><span>R</span></p>
+                  <p>David <b>+4</b><span>P</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Nasir <b>+13</b><span>M</span></p>
-                <p>Sumon <b>+2</b><span>L</span></p>
-                <p>Rashid <b>+10</b><span>K</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Nasir <b>+13</b><span>M</span></p>
+                  <p>Sumon <b>+2</b><span>L</span></p>
+                  <p>Rashid <b>+10</b><span>K</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Ayesha <b>+9</b><span>A</span></p>
-                <p>Karim <b>+14</b><span>K</span></p>
-                <p>Nadia <b>+6</b><span>N</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Ayesha <b>+9</b><span>A</span></p>
+                  <p>Karim <b>+14</b><span>K</span></p>
+                  <p>Nadia <b>+6</b><span>N</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Rahim <b>+8</b><span>R</span></p>
-                <p>Sadia <b>+11</b><span>S</span></p>
-                <p>Hasan <b>+5</b><span>H</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Rahim <b>+8</b><span>R</span></p>
+                  <p>Sadia <b>+11</b><span>S</span></p>
+                  <p>Hasan <b>+5</b><span>H</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Marium <b>+16</b><span>M</span></p>
-                <p>Tanvir <b>+7</b><span>T</span></p>
-                <p>Ruhul <b>+12</b><span>R</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Marium <b>+16</b><span>M</span></p>
+                  <p>Tanvir <b>+7</b><span>T</span></p>
+                  <p>Ruhul <b>+12</b><span>R</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Shiuli <b>+4</b><span>S</span></p>
-                <p>Babul <b>+13</b><span>B</span></p>
-                <p>Nasreen <b>+9</b><span>N</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Shiuli <b>+4</b><span>S</span></p>
+                  <p>Babul <b>+13</b><span>B</span></p>
+                  <p>Nasreen <b>+9</b><span>N</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Khalil <b>+10</b><span>K</span></p>
-                <p>Rashida <b>+8</b><span>R</span></p>
-                <p>Shamim <b>+15</b><span>S</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Khalil <b>+10</b><span>K</span></p>
+                  <p>Rashida <b>+8</b><span>R</span></p>
+                  <p>Shamim <b>+15</b><span>S</span></p>
+                </div>
 
-              
-              <div class="live-row">
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Mannu <b>+7</b><span>T</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Anana blue <b>+7</b><span>T</span></p>
+                  <p>Anana blue <b>+7</b><span>T</span></p>
+                  <p>Mannu <b>+7</b><span>T</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Sakib Khan <b>+12</b><span>G</span></p>
-                <p>Rima <b>+5</b><span>S</span></p>
-                <p>John <b>+8</b><span>B</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Sakib Khan <b>+12</b><span>G</span></p>
+                  <p>Rima <b>+5</b><span>S</span></p>
+                  <p>John <b>+8</b><span>B</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Maria <b>+15</b><span>D</span></p>
-                <p>Ahmed <b>+3</b><span>C</span></p>
-                <p>Lisa <b>+9</b><span>H</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Maria <b>+15</b><span>D</span></p>
+                  <p>Ahmed <b>+3</b><span>C</span></p>
+                  <p>Lisa <b>+9</b><span>H</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Rahman <b>+6</b><span>F</span></p>
-                <p>Fatima <b>+11</b><span>R</span></p>
-                <p>David <b>+4</b><span>P</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Rahman <b>+6</b><span>F</span></p>
+                  <p>Fatima <b>+11</b><span>R</span></p>
+                  <p>David <b>+4</b><span>P</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Nasir <b>+13</b><span>M</span></p>
-                <p>Sumon <b>+2</b><span>L</span></p>
-                <p>Rashid <b>+10</b><span>K</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Nasir <b>+13</b><span>M</span></p>
+                  <p>Sumon <b>+2</b><span>L</span></p>
+                  <p>Rashid <b>+10</b><span>K</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Ayesha <b>+9</b><span>A</span></p>
-                <p>Karim <b>+14</b><span>K</span></p>
-                <p>Nadia <b>+6</b><span>N</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Ayesha <b>+9</b><span>A</span></p>
+                  <p>Karim <b>+14</b><span>K</span></p>
+                  <p>Nadia <b>+6</b><span>N</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Rahim <b>+8</b><span>R</span></p>
-                <p>Sadia <b>+11</b><span>S</span></p>
-                <p>Hasan <b>+5</b><span>H</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Rahim <b>+8</b><span>R</span></p>
+                  <p>Sadia <b>+11</b><span>S</span></p>
+                  <p>Hasan <b>+5</b><span>H</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Marium <b>+16</b><span>M</span></p>
-                <p>Tanvir <b>+7</b><span>T</span></p>
-                <p>Ruhul <b>+12</b><span>R</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Marium <b>+16</b><span>M</span></p>
+                  <p>Tanvir <b>+7</b><span>T</span></p>
+                  <p>Ruhul <b>+12</b><span>R</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Shiuli <b>+4</b><span>S</span></p>
-                <p>Babul <b>+13</b><span>B</span></p>
-                <p>Nasreen <b>+9</b><span>N</span></p>
-              </div>
+                <div class="live-row">
+                  <p>Shiuli <b>+4</b><span>S</span></p>
+                  <p>Babul <b>+13</b><span>B</span></p>
+                  <p>Nasreen <b>+9</b><span>N</span></p>
+                </div>
 
-              <div class="live-row">
-                <p>Khalil <b>+10</b><span>K</span></p>
-                <p>Rashida <b>+8</b><span>R</span></p>
-                <p>Shamim <b>+15</b><span>S</span></p>
+                <div class="live-row">
+                  <p>Khalil <b>+10</b><span>K</span></p>
+                  <p>Rashida <b>+8</b><span>R</span></p>
+                  <p>Shamim <b>+15</b><span>S</span></p>
+                </div>
               </div>
             </div>
-          </div>
-        </div> -->
+          </div> -->
 
           <!-- Learn more about our Affiliate Program -->
           <div class="affiliate-card-bdt">
@@ -747,6 +753,84 @@
               </div>
             </div>
           </section>
+
+          <!-- My Rewards Sub-tabs -->
+          <div class="tab-navigation">
+            <div
+              class="tab-item active"
+              data-subtab="commisionByFriends"
+              onclick="showSubTab('commisionByFriends')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+              </svg>
+              <p>Commission by Friends</p>
+            </div>
+            <div
+              class="tab-item"
+              data-subtab="commissionByCurrency"
+              onclick="showSubTab('commissionByCurrency')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
+                />
+              </svg>
+              <p>Commission by Currency</p>
+            </div>
+            <div
+              class="tab-item"
+              data-subtab="levelUpRew"
+              onclick="showSubTab('levelUpRew')"
+            >
+              <svg
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.06 7H16.5c-.83 0-1.5-.67-1.5-1.5S15.67 4 16.5 4h2c1.1 0 2 .9 2 2 0 .74-.4 1.38-1 1.73V22h-1zm-12.5 0c-.83 0-1.5-.67-1.5-1.5S6.67 19 7.5 19s1.5.67 1.5 1.5S8.33 22 7.5 22zm3-7H8l1.38-4.5H11V22h-1zm6-9H9.5c-.83 0-1.5.67-1.5 1.5S8.67 8 9.5 8H16v-1z"
+                />
+              </svg>
+              <p>Level up Rewards</p>
+            </div>
+          </div>
+
+          <!-- My Rewards Sub-tab Content -->
+          <div id="commisionByFriends" class="tab-content sub-tab active">
+            <div class="content-section">
+              <h3>Commission by Friends</h3>
+              <p>
+                View your commission earnings broken down by each friend you've
+                referred.
+              </p>
+            </div>
+          </div>
+
+          <div id="commissionByCurrency" class="tab-content sub-tab">
+            <div class="content-section">
+              <h3>Commission by Currency</h3>
+              <p>See your commissions categorized by currency type.</p>
+            </div>
+          </div>
+
+          <div id="levelUpRew" class="tab-content sub-tab">
+            <div class="content-section">
+              <h3>Level Up Rewards</h3>
+              <p>Track your level progression and associated rewards.</p>
+            </div>
+          </div>
         </div>
 
         <!-- Referral Codes & Friends Tab -->
@@ -1013,6 +1097,25 @@
               })();
 
               // Tab functionality
+              document.addEventListener("DOMContentLoaded", function () {
+                // Initialize the dashboard tab as active
+                showTab("dashboard");
+
+                // Set up main tab click handlers
+                const mainTabItems = document.querySelectorAll(
+                  ".tab-navigation .tab-item[data-tab]"
+                );
+                mainTabItems.forEach((item) => {
+                  item.addEventListener("click", function () {
+                    const tabName = this.getAttribute("data-tab");
+                    showTab(tabName);
+                  });
+                });
+
+                // Initialize slider
+                initSlider();
+              });
+
               function showTab(tabName) {
                 // Hide all tab contents
                 const tabContents = document.querySelectorAll(".tab-content");
@@ -1021,7 +1124,9 @@
                 });
 
                 // Remove active class from all tab items
-                const tabItems = document.querySelectorAll(".tab-item");
+                const tabItems = document.querySelectorAll(
+                  ".tab-navigation .tab-item"
+                );
                 tabItems.forEach((item) => {
                   item.classList.remove("active");
                 });
@@ -1032,24 +1137,49 @@
                   selectedTab.classList.add("active");
                 }
 
-                // 👇 NEW: Activate the correct tab item without relying on `event`
+                // Activate the clicked tab item
                 const clickedTab = document.querySelector(
-                  `.tab-item[onclick*="${tabName}"]`
+                  `.tab-item[data-tab="${tabName}"]`
                 );
                 if (clickedTab) {
                   clickedTab.classList.add("active");
                 }
+
+                // If we're showing the rewards tab, also initialize its first sub-tab
+                if (tabName === "rewards") {
+                  showSubTab("commisionByFriends");
+                }
               }
 
-              // ✅ ADD this one line inside your existing DOMContentLoaded callback (at the top)
-              document.addEventListener("DOMContentLoaded", function () {
-                // Open Dashboard by default on first load
-                showTab("dashboard");
+              function showSubTab(subTabName) {
+                // Hide all sub-tab contents
+                const subTabContents = document.querySelectorAll(".sub-tab");
+                subTabContents.forEach((content) => {
+                  content.classList.remove("active");
+                });
 
-                // ... keep your existing code below
-                // Ensure continuous visible scroll
-                scrollContainer.style.animationPlayState = "running";
-              });
+                // Remove active class from all sub-tab items
+                const subTabItems = document.querySelectorAll(
+                  ".tab-item[data-subtab]"
+                );
+                subTabItems.forEach((item) => {
+                  item.classList.remove("active");
+                });
+
+                // Show selected sub-tab content
+                const selectedSubTab = document.getElementById(subTabName);
+                if (selectedSubTab) {
+                  selectedSubTab.classList.add("active");
+                }
+
+                // Activate the clicked sub-tab item
+                const clickedSubTab = document.querySelector(
+                  `.tab-item[data-subtab="${subTabName}"]`
+                );
+                if (clickedSubTab) {
+                  clickedSubTab.classList.add("active");
+                }
+              }
 
               // Simple continuous scroll - always visible content
               const scrollContainer =

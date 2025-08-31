@@ -366,6 +366,14 @@
   display: block;
 }
 
+.sub-tab {
+  display: none;
+}
+
+.sub-tab.active {
+  display: block;
+}
+
 /* Content sections */
 .affiliate-card-bdt {
   padding: 20px;
