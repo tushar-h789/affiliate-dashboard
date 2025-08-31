@@ -126,10 +126,10 @@
 }
 
 .faq-item__content p {
-  font-weight: 600;
-  margin: 8px;
+  font-weight: 400;
+  margin: 12px;
   text-align: start;
-  font-size: 14px;
+  font-size: 11px;
   line-height: 20px;
   color: var(--text-secondary);
 }
