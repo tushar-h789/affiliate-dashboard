@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="Styles/slider.css" />
     <link rel="stylesheet" href="Styles/total-reward.css" />
     <link rel="stylesheet" href="Styles/refferral.css" />
+    <link rel="stylesheet" href="Styles/my-rewards.css" />
   </head>
   <body>
     <div class="container">
@@ -660,7 +661,7 @@
         <!-- My Rewards Tab -->
         <div id="rewards" class="tab-content">
           <!-- total reward section -->
-          <div class="total-reward">
+          <!-- <div class="total-reward">
             <div class="total-card">
               <div class="total-item">
                 <img
@@ -703,23 +704,49 @@
                 <div class="total-value">$0.00</div>
               </div>
             </div>
-          </div>
+          </div> -->
 
-          <!-- refferal activitise section -->
-          <div class="referral">
-            <div class="referral-card">
-              <h4 class="referral-title">My Reward Activities</h4>
-              <div>
-                <img
-                  class="referral-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo="
-                  alt=""
-                />
-                <p class="referral-dec">No rewards yet</p>
-                <p class="referral-dec">Start earning rewards now!</p>
+          <section class="my-rewards-card">
+            <div class="my-rewards-card-inner">
+              <!-- Section 1 -->
+              <div class="my-rewards-section">
+                <div class="my-rewards-section-head">
+                  <span>Available Commission Rewards</span>
+                  <span class="my-rewards-info">i</span>
+                </div>
+                <div class="my-rewards-amount">$0.00</div>
+                <p class="my-rewards-meta">Total Received $0.00</p>
+              </div>
+
+              <!-- Section 2 -->
+              <div class="my-rewards-section">
+                <div class="my-rewards-section-head">
+                  <span>Available Referral Rewards</span>
+                  <span class="my-rewards-info">i</span>
+                </div>
+                <div class="my-rewards-amount">$0.00</div>
+                <p class="my-rewards-meta">
+                  Total Received $0.00 &nbsp;&nbsp;
+                  <strong style="color: #cfcfcf; font-weight: 600"
+                    >Locked Rewards</strong
+                  >
+                  <span class="my-rewards-meta" style="color: white" ;
+                    >$0.00</span
+                  >
+                </p>
+              </div>
+
+              <!-- Footer buttons -->
+              <div class="my-rewards-footer">
+                <button class="my-rewards-btn my-rewards-btn-secondary">
+                  Swap
+                </button>
+                <button class="my-rewards-btn my-rewards-btn-primary" disabled>
+                  Withdraw to Wallet
+                </button>
               </div>
             </div>
-          </div>
+          </section>
         </div>
 
         <!-- Referral Codes & Friends Tab -->
