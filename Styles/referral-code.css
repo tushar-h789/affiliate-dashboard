@@ -347,16 +347,24 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.copy-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: #ffffff;
+  transition: fill 0.2s ease;
 }
 
 .copy-icon:hover {
   background: #666666;
+  transform: scale(1.05);
 }
 
-.copy-icon::before {
-  content: "📋";
-  font-size: 12px;
+.copy-icon:hover svg {
+  fill: #ffffff;
 }
 
 .arrow-icon {
@@ -484,16 +492,24 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-size: 12px;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.details-copy-icon svg {
+  width: 12px;
+  height: 12px;
+  fill: #ffffff;
+  transition: fill 0.2s ease;
 }
 
 .details-copy-icon:hover {
   background: #666666;
+  transform: scale(1.05);
 }
 
-.details-copy-icon::before {
-  content: "📋";
+.details-copy-icon:hover svg {
+  fill: #ffffff;
 }
 
 /* Wager Section */
