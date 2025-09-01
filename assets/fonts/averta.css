@@ -1,0 +1,56 @@
+/* Averta Font Family */
+@font-face {
+  font-family: "Averta";
+  src: url("./averta/AvertaStd-Regular.woff") format("woff"),
+    url("./averta/AvertaStd-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("./averta/AvertaStd-Medium.woff") format("woff"),
+    url("./averta/AvertaStd-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("./averta/AvertaStd-SemiBold.woff") format("woff"),
+    url("./averta/AvertaStd-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("./averta/AvertaStd-Bold.woff") format("woff"),
+    url("./averta/AvertaStd-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Averta";
+  src: url("./averta/AvertaStd-ExtraBold.woff") format("woff"),
+    url("./averta/AvertaStd-ExtraBold.woff2") format("woff2");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Fallback font stack */
+:root {
+  --font-family-primary: "Averta", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Global font application */
+* {
+  font-family: var(--font-family-primary);
+}

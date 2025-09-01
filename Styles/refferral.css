@@ -1,41 +1,40 @@
- :root {
-      --bg-body: #1e1e1e;
+:root {
+  --bg-body: #1e1e1e;
   --bg-card: #2a2a2a;
   --text-primary: #f7f7f7;
-  --text-secondary: #FFFFFF;
+  --text-secondary: #ffffff;
   --bg-input: #1c1c1c;
   --btn-bg: #323738;
   --btn-bg-hover: #444444;
   --input-bg-color: #232626;
-  --total--color: #AAAAAA;
-    }
+  --total--color: #aaaaaa;
+}
 
-    .referral {
-      font-family: Arial, sans-serif;
-      display: flex;
-      padding: 4px 0px;
-    }
+.referral {
+  font-family: var(--font-family-primary);
+  display: flex;
+  padding: 4px 0px;
+}
 
-    .referral-card {
-      background: var(--btn-bg);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-      border-radius: 8px;
-      padding: 2px 0px 36px;
-      width: 100%;
-      max-width: 768px; /* mobile width */
-    padding: 18px 0px;
-      
-    }
+.referral-card {
+  background: var(--btn-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 2px 0px 36px;
+  width: 100%;
+  max-width: 768px; /* mobile width */
+  padding: 18px 0px;
+}
 
-    .referral-title{
-        font-size: 16px;
-        color: var(--text-secondary);
-        text-align: start;
-        margin-left: 16px;
-        margin-bottom: 74px;
-    }
+.referral-title {
+  font-size: 16px;
+  color: var(--text-secondary);
+  text-align: start;
+  margin-left: 16px;
+  margin-bottom: 74px;
+}
 
-    .referral-dec{
-        font-size: 14px;
-        color: var(--text-secondary);
-    }
+.referral-dec {
+  font-size: 14px;
+  color: var(--text-secondary);
+}

@@ -34,7 +34,7 @@
          ================================ */
 body {
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: var(--font-family-primary);
   background: var(--body-bg);
   display: flex;
   justify-content: center;
