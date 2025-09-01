@@ -1092,8 +1092,40 @@
                     </button>
                   </div>
 
-                  <div class="rar-rules">
-                    <button class="rar-btn-secondary">View Rules</button>
+                  <div class="rar-rules" data-rules>
+                    <div id="rar-rules-panel-1" class="rar-rules__panel" hidden>
+                      <div class="rar-rules__content">
+                        <!-- your rules text goes here -->
+                        <p>
+                          In any public environment (eg, universities, schools,
+                          libraries, and office spaces), only one commission can
+                          be paid to each user, IP address, electronic device,
+                          home, phone number, billing method, email address, and
+                          computer and IP address shared with others. Our
+                          decision to draw a bet will be based entirely on our
+                          discretion after a deposit is made and a bet is
+                          successfully placed.
+                        </p>
+                        <p>
+                          We support the majority of currencies on the market.
+                          Commissions can be withdrawn into our internal BC.GAME
+                          wallet at anytime. (View your commission extraction in
+                          the dashboard and view the balance in the wallet). The
+                        </p>
+                        <p>
+                          The system calculates the commission every 24 hours.
+                        </p>
+                      </div>
+                    </div>
+
+                    <button
+                      type="button"
+                      class="rar-btn-secondary rar-rules__toggle"
+                      aria-expanded="false"
+                      aria-controls="rar-rules-panel-1"
+                    >
+                      View Rules
+                    </button>
                   </div>
                 </div>
               </section>
@@ -1109,58 +1141,61 @@
                 </header>
 
                 <div class="rar-form">
-  <!-- Wager -->
-  <div class="rar-field">
-    <label for="wager">Wager (USDT)</label>
-    <div class="rar-input-group">
-      <input
-        id="wager"
-        type="number"
-        min="0"
-        step="0.01"
-        value="1000"
-      />
-      <span class="rar-suffix">× 1%</span>
-    </div>
-  </div>
+                  <!-- Wager -->
+                  <div class="rar-field">
+                    <label for="wager">Wager (USDT)</label>
+                    <div class="rar-input-group">
+                      <input
+                        id="wager"
+                        type="number"
+                        min="0"
+                        step="0.01"
+                        value="1000"
+                      />
+                      <span class="rar-suffix">× 1%</span>
+                    </div>
+                  </div>
 
-  <!-- Commission Rate -->
-  <div class="rar-field">
-    <label for="rate">Commission Rate</label>
-    <div class="rar-input-group">
-      <input
-        id="rate"
-        type="number"
-        min="0"
-        max="100"
-        step="0.1"
-        value="25"
-      />
-      <span class="rar-suffix">%</span>
-    </div>
-  </div>
+                  <!-- Commission Rate -->
+                  <div class="rar-field">
+                    <label for="rate">Commission Rate</label>
+                    <div class="rar-input-group">
+                      <input
+                        id="rate"
+                        type="number"
+                        min="0"
+                        max="100"
+                        step="0.1"
+                        value="25"
+                      />
+                      <span class="rar-suffix">%</span>
+                    </div>
+                  </div>
 
-  <!-- Game Dropdown -->
-  <div class="rar-field rar-field--full">
-    <label for="game">Game</label>
-    <div class="rar-select">
-      <select id="game">
-        <option value="0.28" selected>Original Games (28%)</option>
-        <option value="0.60">3rd Party Slots, Live Casino (60%)</option>
-        <option value="1.00">All Sports (100%)</option>
-      </select>
-      <span class="rar-caret">▾</span>
-    </div>
-  </div>
+                  <!-- Game Dropdown -->
+                  <div class="rar-field rar-field--full">
+                    <label for="game">Game</label>
+                    <div class="rar-select">
+                      <select id="game">
+                        <option value="0.28" selected>
+                          Original Games (28%)
+                        </option>
+                        <option value="0.60">
+                          3rd Party Slots, Live Casino (60%)
+                        </option>
+                        <option value="1.00">All Sports (100%)</option>
+                      </select>
+                      <span class="rar-caret">▾</span>
+                    </div>
+                  </div>
 
-  <!-- Result -->
-  <div class="rar-result">
-    <span>=</span>
-    <strong id="payout">0.70</strong>
-    <span>USDT</span>
-  </div>
-</div>
-
+                  <!-- Result -->
+                  <div class="rar-result">
+                    <span>=</span>
+                    <strong id="payout">0.70</strong>
+                    <span>USDT</span>
+                  </div>
+                </div>
               </section>
             </div>
           </div>
@@ -1488,27 +1523,72 @@
         }
       });
 
-
       // simple calculator logic – mirrors the screenshot math
-  (function () {
-    const $wager = document.getElementById('wager');
-    const $rate  = document.getElementById('rate');
-    const $game  = document.getElementById('game');
-    const $out   = document.getElementById('payout');
+      (function () {
+        const $wager = document.getElementById("wager");
+        const $rate = document.getElementById("rate");
+        const $game = document.getElementById("game");
+        const $out = document.getElementById("payout");
 
-    const fmt = (n) => (Math.round(n * 100) / 100).toFixed(2);
+        const fmt = (n) => (Math.round(n * 100) / 100).toFixed(2);
 
-    function compute() {
-      const wager = parseFloat($wager.value || 0);
-      const rate  = parseFloat($rate.value || 0) / 100;   // e.g. 25% => 0.25
-      const gameK = parseFloat($game.value || 0);         // 0.28, 0.60, 1.00
-      // Formula from UI: Wager × 1% × Commission Rate × Game Multiplier
-      const res = wager * 0.01 * rate * gameK;
-      $out.textContent = fmt(res);
-    }
-    [$wager, $rate, $game].forEach(el => el.addEventListener('input', compute));
-    compute();
-  })();
+        function compute() {
+          const wager = parseFloat($wager.value || 0);
+          const rate = parseFloat($rate.value || 0) / 100; // e.g. 25% => 0.25
+          const gameK = parseFloat($game.value || 0); // 0.28, 0.60, 1.00
+          // Formula from UI: Wager × 1% × Commission Rate × Game Multiplier
+          const res = wager * 0.01 * rate * gameK;
+          $out.textContent = fmt(res);
+        }
+        [$wager, $rate, $game].forEach((el) =>
+          el.addEventListener("input", compute)
+        );
+        compute();
+      })();
+
+      (function () {
+        document
+          .querySelectorAll(".rewards-and-rates .rar-rules")
+          .forEach((root, idx) => {
+            const btn = root.querySelector(".rar-rules__toggle");
+            const panel = root.querySelector(".rar-rules__panel");
+
+            const id = panel.id || `rar-rules-panel-${idx + 1}`;
+            panel.id = id;
+            btn.setAttribute("aria-controls", id);
+
+            function openPanel() {
+              panel.hidden = false;
+              panel.style.height = panel.scrollHeight + "px";
+              panel.setAttribute("aria-hidden", "false");
+              btn.setAttribute("aria-expanded", "true");
+              btn.textContent = "Less Rules ▴";
+            }
+
+            function closePanel() {
+              panel.style.height = panel.scrollHeight + "px";
+              panel.getBoundingClientRect(); // reflow
+              panel.style.height = "0px";
+              panel.setAttribute("aria-hidden", "true");
+              btn.setAttribute("aria-expanded", "false");
+              btn.textContent = "View Rules ▾";
+            }
+
+            function isOpen() {
+              return btn.getAttribute("aria-expanded") === "true";
+            }
+
+            btn.addEventListener("click", () =>
+              isOpen() ? closePanel() : openPanel()
+            );
+
+            panel.addEventListener("transitionend", (e) => {
+              if (e.propertyName !== "height") return;
+              if (!isOpen()) panel.hidden = true;
+              else panel.style.height = "auto"; // let it resize naturally
+            });
+          });
+      })();
     </script>
   </body>
 </html>

@@ -163,8 +163,51 @@
 
 /* rules button */
 .rewards-and-rates .rar-rules {
-  margin-top: 8px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; 
 }
+
+
+.rewards-and-rates .rar-caret {
+  display: inline-block;
+  transition: transform 200ms ease;
+  color: var(--text-placeholder);
+}
+.rewards-and-rates .rar-caret.up {
+  transform: rotate(180deg);
+}
+
+/* panel */
+.rewards-and-rates .rar-rules__panel {
+  /* border: 1px solid var(--border-light); */
+  /* background: var(--content-bg); */
+  /* border-radius: 10px; */
+  /* overflow: hidden; */
+  height: 0;
+  opacity: 0;
+  transition: height 240ms ease, opacity 240ms ease;
+}
+
+.rewards-and-rates .rar-rules__panel[aria-hidden="false"] {
+  opacity: 1;
+}
+
+.rewards-and-rates .rar-rules__content {
+  padding: 12px 14px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.6;
+}
+.rewards-and-rates .rar-rules__content p {
+  margin: 0 0 10px;
+  text-align: start;
+}
+.rewards-and-rates .rar-rules__content p:last-child {
+  margin-bottom: 0;
+}
+
 .rewards-and-rates .rar-btn-secondary {
   background: var(--btn-hover-bg, rgba(255, 255, 255, 0.1));
   color: var(--fg);
@@ -189,16 +232,16 @@
   color: var(--fg-dim);
 }
 
-.rar-currency__icon{
-    background: var(--shadow-dot);
-    padding: 2px 6px;
-    border-radius: 50%;
-    color: var(--text-primary);
+.rar-currency__icon {
+  background: var(--shadow-dot);
+  padding: 2px 6px;
+  border-radius: 50%;
+  color: var(--text-primary);
 }
 
-.rewards-and-rates .rar-currency span{
-    font-weight: 700;
-    color: var(--text-primary);
+.rewards-and-rates .rar-currency span {
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 /* form */
@@ -298,13 +341,11 @@
   color: var(--accent-color);
 }
 
-
 /* responsive */
 @media (max-width: 768px) {
   .rewards-and-rates .rar-container {
     grid-template-columns: 1fr;
   }
-  
 }
 
 @media (max-width: 375px) {
@@ -312,8 +353,8 @@
     grid-template-columns: 1fr;
   }
 
- .rewards-and-rates h2 {
-  font-size: 14px;
-  font-weight: 500;
-}
+  .rewards-and-rates h2 {
+    font-size: 14px;
+    font-weight: 500;
+  }
 }
