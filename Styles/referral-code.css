@@ -310,6 +310,34 @@ body {
   cursor: pointer;
 }
 
+.col-referrals-inner{
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+}
+
+.arrow-icon svg {
+  width: 28px;
+  height: 28px;
+  fill: var(--text-secondary);
+  transition: fill 0.2s ease;
+}
+
+.arrow-icon:hover svg {
+  fill: #ffffff;
+}
+
 .copy-icon {
   width: 20px;
   height: 20px;
