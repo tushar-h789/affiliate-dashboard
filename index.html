@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="Styles/refferral.css" />
     <link rel="stylesheet" href="Styles/my-rewards.css" />
     <link rel="stylesheet" href="Styles/rates-and-rules.css" />
+    <link rel="stylesheet" href="Styles/referral-code.css" />
   </head>
   <body>
     <div class="container">
@@ -986,66 +987,237 @@
 
         <!-- Referral Codes & Friends Tab -->
         <div id="referrals" class="tab-content">
-          <div class="affiliate-card-bdt">
-            <h3 class="learn-title">
-              Referral Codes & <br />
-              <span>Friends Management</span>
-            </h3>
+          <section class="referral-code-container">
+            <!-- =================== MAIN VIEW =================== -->
+            <div class="main-view" id="mainView">
+              <div class="referral-card">
+                <div class="referral-row">
+                  <div class="referral-col">
+                    <div class="label">Referral Code Created</div>
+                    <div class="number">5/20</div>
+                  </div>
+                  <div class="col">
+                    <div class="label">Friends</div>
+                    <div class="number">0</div>
+                  </div>
+                </div>
+                <button class="btn" id="createBtn">Create Code</button>
+              </div>
 
-            <div class="refrerral-container">
-              <h2>My Referral Code</h2>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="text"
-                  value="REF32G5TRG"
-                  readonly
-                />
-                <button class="send-btn">Copy</button>
+              <!-- Popup Overlay -->
+              <div class="overlay" id="overlay">
+                <div class="popup">
+                  <div class="popup-header">
+                    <h3>Create Code</h3>
+                    <button class="close-btn" id="closeBtn">&times;</button>
+                  </div>
+                  <label>Campaign Name (Optional)</label>
+                  <input
+                    type="text"
+                    placeholder="Enter Campaign Name"
+                    id="campaignInput"
+                  />
+                  <button class="create-btn" id="createCampaignBtn">
+                    Create campaign
+                  </button>
+                </div>
+              </div>
+
+              <div class="referral-friends-table-container">
+                <!-- Table Header -->
+                <div class="referral-friends-table-header">
+                  <div class="header-name">Name</div>
+                  <div class="header-code">Code</div>
+
+                  <div class="header-referrals">Referrals</div>
+                </div>
+
+                <!-- Table Rows -->
+                <div class="table-row">
+                  <div class="col-name">--</div>
+                  <div class="col-code">
+                    40gldhtwl
+                    <div class="copy-icon" title="Copy Code"></div>
+                  </div>
+
+                  <div
+                    class="col-referrals"
+                    data-code="40gldhtwl"
+                    data-link="https://bc.game/i-40gldhtwl-n/"
+                    data-date="2025-08-27 09:53:23"
+                  >
+                    0
+                    <div class="arrow-icon">›</div>
+                  </div>
+                </div>
+
+                <div class="table-row">
+                  <div class="col-name">--</div>
+                  <div class="col-code">
+                    40gral793
+                    <div class="copy-icon" title="Copy Code"></div>
+                  </div>
+
+                  <div
+                    class="col-referrals"
+                    data-code="40gral793"
+                    data-link="https://bc.game/i-40gral793-n/"
+                    data-date="2025-08-27 10:15:45"
+                  >
+                    0
+                    <div class="arrow-icon">›</div>
+                  </div>
+                </div>
+
+                <div class="table-row">
+                  <div class="col-name">--</div>
+                  <div class="col-code">
+                    40graldhd
+                    <div class="copy-icon" title="Copy Code"></div>
+                  </div>
+
+                  <div
+                    class="col-referrals"
+                    data-code="40graldhd"
+                    data-link="https://bc.game/i-40graldhd-n/"
+                    data-date="2025-08-27 11:22:12"
+                  >
+                    0
+                    <div class="arrow-icon">›</div>
+                  </div>
+                </div>
+
+                <div class="table-row">
+                  <div class="col-name">--</div>
+                  <div class="col-code">
+                    40gralo6c
+                    <div class="copy-icon" title="Copy Code"></div>
+                  </div>
+
+                  <div
+                    class="col-referrals"
+                    data-code="40gralo6c"
+                    data-link="https://bc.game/i-40gralo6c-n/"
+                    data-date="2025-08-27 12:05:33"
+                  >
+                    0
+                    <div class="arrow-icon">›</div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div class="refrerral-container">
-              <h2>Generate New Code</h2>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="text"
-                  placeholder="Enter custom code (optional)"
-                />
-                <button class="send-btn">Generate</button>
+            <!-- =================== DETAILS VIEW =================== -->
+            <div class="details-view" id="detailsView">
+              <!-- Header -->
+              <div class="referral-friends-header">
+                <button class="referral-friends-back-btn" id="backBtn">‹</button>
+                <div class="referral-friends-header-title">Referral Code Details</div>
+              </div>
+
+              <!-- Main Content -->
+              <div class="referral-friends-content">
+                <!-- Details Rows -->
+                <div class="detail-row">
+                  <div class="detail-label">Name</div>
+                  <div class="detail-value">--</div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-label">Code</div>
+                  <div class="detail-value">
+                    <span id="detailCode">40gldhtwl</span>
+                    <div
+                      class="details-copy-icon"
+                      onclick="copyToClipboard('code')"
+                      title="Copy Code"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-label">Link</div>
+                  <div class="detail-value">
+                    <span id="detailLink">https://bc.game/i-40gldhtwl-n/</span>
+                    <div
+                      class="details-copy-icon"
+                      onclick="copyToClipboard('link')"
+                      title="Copy Link"
+                    ></div>
+                  </div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-label">Date Created</div>
+                  <div class="detail-value" id="detailDate">
+                    2025-08-27 09:53:23
+                  </div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-label">Referrals</div>
+                  <div class="detail-value">0</div>
+                </div>
+
+                <div class="detail-row">
+                  <div class="detail-label">Commission Rate</div>
+                  <div class="detail-value">25%</div>
+                </div>
+
+                <!-- Wager Section -->
+                <div class="wager-section">
+                  <div class="wager-header">Wager</div>
+
+                  <div class="wager-item">
+                    <div class="wager-label">BC Originals ($)</div>
+                    <div class="wager-value">--</div>
+                  </div>
+
+                  <div class="wager-item">
+                    <div class="wager-label">
+                      Live Casino & 3rd Party Slots ($)
+                    </div>
+                    <div class="wager-value">--</div>
+                  </div>
+
+                  <div class="wager-item">
+                    <div class="wager-label">Sports ($)</div>
+                    <div class="wager-value">--</div>
+                  </div>
+
+                  <div class="wager-item total-wager">
+                    <div class="wager-label">Total Wager ($)</div>
+                    <div class="wager-value">--</div>
+                  </div>
+                </div>
+                <div class="wager-section">
+                  <div class="wager-header">Commision</div>
+
+                  <div class="wager-item">
+                    <div class="wager-label">BC Originals ($)</div>
+                    <div class="wager-value">--</div>
+                  </div>
+
+                  <div class="wager-item">
+                    <div class="wager-label">
+                      Live Casino & 3rd Party Slots ($)
+                    </div>
+                    <div class="wager-value">--</div>
+                  </div>
+
+                  <div class="wager-item">
+                    <div class="wager-label">Sports ($)</div>
+                    <div class="wager-value">--</div>
+                  </div>
+
+                  <div class="wager-item total-wager">
+                    <div class="wager-label">Total Wager ($)</div>
+                    <div class="wager-value">--</div>
+                  </div>
+                </div>
               </div>
             </div>
-
-            <div class="bdt-image-box">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDIwMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTIwIiBmaWxsPSIjMDBmZjg4IiBvcGFjaXR5PSIwLjEiLz4KPHN2ZyB4PSI4NSIgeT0iNDUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMDBmZjg4Ij4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4KPC9zdmc+Cg=="
-                alt="Friends Network"
-              />
-            </div>
-
-            <p class="learn-subtitle">
-              Manage your referral codes and track your friends' activities. You
-              can generate multiple codes for different campaigns and see
-              detailed statistics for each one.
-            </p>
-          </div>
-
-          <!-- Friends List -->
-          <div class="referral">
-            <div class="referral-card">
-              <h4 class="referral-title">My Friends</h4>
-              <div>
-                <img
-                  class="referral-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4K"
-                  alt=""
-                />
-                <p class="referral-dec">No friends referred yet</p>
-                <p class="referral-dec">Share your code to start earning!</p>
-              </div>
-            </div>
-          </div>
+          </section>
         </div>
 
         <!-- Rate & Rules Tab -->
@@ -1751,6 +1923,198 @@
             });
           });
       })();
+
+      // ==============================================
+      // reffreal code and friends
+      const overlay = document.getElementById("overlay");
+      const createBtn = document.getElementById("createBtn");
+      const closeBtn = document.getElementById("closeBtn");
+      const createCampaignBtn = document.getElementById("createCampaignBtn");
+      const campaignInput = document.getElementById("campaignInput");
+      const mainView = document.getElementById("mainView");
+      const detailsView = document.getElementById("detailsView");
+      const backBtn = document.getElementById("backBtn");
+      const detailCode = document.getElementById("detailCode");
+      const detailLink = document.getElementById("detailLink");
+      const detailDate = document.getElementById("detailDate");
+
+      // Show popup with smooth animation
+      createBtn.addEventListener("click", () => {
+        overlay.style.display = "flex";
+        setTimeout(() => {
+          overlay.classList.add("show");
+          setTimeout(() => {
+            campaignInput.focus();
+          }, 300);
+        }, 10);
+      });
+
+      // Hide popup
+      function hidePopup() {
+        overlay.classList.remove("show");
+        setTimeout(() => {
+          overlay.style.display = "none";
+          campaignInput.value = "";
+        }, 300);
+      }
+
+      // Close button click
+      closeBtn.addEventListener("click", hidePopup);
+
+      // Click outside popup to close
+      overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+          hidePopup();
+        }
+      });
+
+      // Create campaign button
+      createCampaignBtn.addEventListener("click", () => {
+        const campaignName = campaignInput.value.trim();
+        if (campaignName) {
+          showToast(`Campaign "${campaignName}" created successfully!`);
+        } else {
+          showToast("Campaign created successfully!");
+        }
+        hidePopup();
+      });
+
+      // Handle Enter key in input
+      campaignInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") {
+          createCampaignBtn.click();
+        }
+      });
+
+      // Handle Escape key to close popup
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && overlay.classList.contains("show")) {
+          hidePopup();
+        }
+      });
+
+      // Show details view function
+      function showDetails(rowData) {
+        // Update details with selected row data
+        detailCode.textContent = rowData.code;
+        detailLink.textContent = rowData.link;
+        detailDate.textContent = rowData.date;
+
+        // Hide main view and show details view
+        mainView.classList.add("hidden");
+        detailsView.classList.add("show");
+      }
+
+      // Hide details view function
+      function hideDetails() {
+        // Hide details view and show main view
+        detailsView.classList.remove("show");
+        mainView.classList.remove("hidden");
+      }
+
+      // Back button functionality
+      backBtn.addEventListener("click", hideDetails);
+
+      // Add click functionality to copy icons in table
+      document.querySelectorAll(".copy-icon").forEach((icon) => {
+        icon.addEventListener("click", function (e) {
+          e.stopPropagation();
+          const codeText = this.previousSibling.textContent.trim();
+          navigator.clipboard
+            .writeText(codeText)
+            .then(() => {
+              this.style.background = "#2ecc71";
+              showToast("Code copied to clipboard!");
+              setTimeout(() => {
+                this.style.background = "#555555";
+              }, 1000);
+            })
+            .catch((err) => {
+              console.error("Failed to copy text: ", err);
+            });
+        });
+      });
+
+      // Add click functionality to referral columns (0 >)
+      document.querySelectorAll(".col-referrals").forEach((col) => {
+        col.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          // Get data from the clicked row
+          const rowData = {
+            code: this.getAttribute("data-code"),
+            link: this.getAttribute("data-link"),
+            date: this.getAttribute("data-date"),
+          };
+
+          // Show details view with this data
+          showDetails(rowData);
+        });
+      });
+
+      // Copy functionality for details page
+      function copyToClipboard(type) {
+        let textToCopy = "";
+        let targetElement = null;
+
+        if (type === "code") {
+          textToCopy = detailCode.textContent;
+          targetElement = detailCode.nextElementSibling;
+        } else if (type === "link") {
+          textToCopy = detailLink.textContent;
+          targetElement = detailLink.nextElementSibling;
+        }
+
+        navigator.clipboard
+          .writeText(textToCopy)
+          .then(() => {
+            if (targetElement) {
+              targetElement.style.background = "#2ecc71";
+              setTimeout(() => {
+                targetElement.style.background = "#555555";
+              }, 1000);
+            }
+            showToast("Copied to clipboard!");
+          })
+          .catch((err) => {
+            console.error("Failed to copy text: ", err);
+          });
+      }
+
+      function showToast(message) {
+        const toast = document.createElement("div");
+        toast.textContent = message;
+        toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #2ecc71;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: bold;
+                z-index: 1000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+
+        document.body.appendChild(toast);
+
+        setTimeout(() => (toast.style.opacity = "1"), 100);
+
+        setTimeout(() => {
+          toast.style.opacity = "0";
+          setTimeout(() => document.body.removeChild(toast), 300);
+        }, 2000);
+      }
+
+      // Handle keyboard navigation
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && detailsView.classList.contains("show")) {
+          hideDetails();
+        }
+      });
     </script>
   </body>
 </html>
