@@ -408,7 +408,7 @@
   font-size: 18px;
   line-height: 1.25;
   color: var(--text-primary, #fff);
-  font-weight: 800; /* bolder like screenshot */
+  font-weight: 500; /* bolder like screenshot */
 }
 .referral-reward .rr-strong {
   font-weight: 900;
@@ -451,6 +451,7 @@
   }
   .referral-reward .rr-desc {
     font-size: 13px;
+    font-weight: 400;
   }
 }
 
@@ -490,6 +491,7 @@
   }
   .referral-reward .rr-desc {
     font-size: 12px;
+    font-weight: 400;
 
   }
 }
