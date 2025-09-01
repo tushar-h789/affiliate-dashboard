@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="Styles/total-reward.css" />
     <link rel="stylesheet" href="Styles/refferral.css" />
     <link rel="stylesheet" href="Styles/my-rewards.css" />
+    <link rel="stylesheet" href="Styles/rates-and-rules.css" />
   </head>
   <body>
     <div class="container">
@@ -1049,466 +1050,465 @@
 
         <!-- Rate & Rules Tab -->
         <div id="rates" class="tab-content">
-          <!-- FAQ section for rates and rules -->
-          <section class="faq" aria-labelledby="faq__heading">
-            <div class="faq__container">
-              <h2 id="faq__heading" class="faq__title">Rates & Rules</h2>
+          <!-- ===== Rewards & Rates ===== -->
+          <div class="rewards-and-rates">
+            <div class="rar-container">
+              <!-- Left: Commission Reward Rate -->
+              <section class="rar-card rar-rates">
+                <header class="rar-card__header">
+                  <h2>Commission Reward Rate</h2>
+                </header>
 
-              <div class="faq__panel" role="list">
-                <!-- Item 1 (open) -->
-                <details class="faq-item" open>
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Commission Rates Structure</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Tier 1: 10% commission on first $1,000 wagered<br />
-                      Tier 2: 15% commission on $1,001 - $5,000 wagered<br />
-                      Tier 3: 20% commission on $5,001 - $10,000 wagered<br />
-                      Tier 4: 25% commission on $10,000+ wagered
-                    </p>
-                  </div>
-                </details>
+                <div class="rar-section">
+                  <h3>Casino</h3>
 
-                <!-- Item 2 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Referral Bonus Rules</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      $1250 bonus paid when referred friend makes their first
-                      deposit of $100 or more and places at least $500 in bets
-                      within 30 days. Bonus is paid within 48 hours of
-                      qualifying activity completion.
-                    </p>
+                  <div class="rar-block">
+                    <p class="rar-block__title">The Original Games</p>
+                    <button class="rar-chip">
+                      <span
+                        >Wager × 1% × Commission Rate ×
+                        <strong>28%</strong></span
+                      >
+                    </button>
                   </div>
-                </details>
 
-                <!-- Item 3 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Payment Schedule</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Commissions are calculated weekly (Sunday to Saturday) and
-                      paid out every Tuesday. Minimum payout threshold is $50.
-                      Payments are made via the same method as your account
-                      deposits.
-                    </p>
+                  <div class="rar-block">
+                    <p class="rar-block__title">3rd Party Slots, Live Casino</p>
+                    <button class="rar-chip">
+                      <span
+                        >Wager × 1% × Commission Rate ×
+                        <strong>60%</strong></span
+                      >
+                    </button>
                   </div>
-                </details>
 
-                <!-- Item 4 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Tracking & Attribution</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Referrals are tracked using cookies (30-day expiry) and
-                      referral codes (permanent attribution). If a user clicks
-                      your link and signs up within 30 days, you get credit even
-                      without using your code.
-                    </p>
+                  <div class="rar-block">
+                    <p class="rar-block__title">All Sports</p>
+                    <button class="rar-chip">
+                      <span
+                        >Wager × 1% × Commission Rate ×
+                        <strong>100%</strong></span
+                      >
+                    </button>
                   </div>
-                </details>
 
-                <!-- Item 5 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Terms & Restrictions</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Self-referrals, fake accounts, and duplicate accounts are
-                      strictly prohibited. Spamming or using misleading
-                      advertising may result in account suspension. All referred
-                      users must be 18+ and comply with local gambling laws.
-                    </p>
+                  <div class="rar-rules">
+                    <button class="rar-btn-secondary">View Rules</button>
                   </div>
-                </details>
+                </div>
+              </section>
 
-                <!-- Item 6 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Geographic Restrictions</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Referral program is available in all supported countries.
-                      However, commission rates may vary by region due to local
-                      regulations. Check your account dashboard for
-                      region-specific rates.
-                    </p>
+              <!-- Right: Commission Calculator -->
+              <section class="rar-card rar-calculator">
+                <header class="rar-card__header rar-card__header--row">
+                  <h2>Commission Calculator</h2>
+                  <div class="rar-currency">
+                    <span class="rar-currency__icon">T</span>
+                    <span>USDT</span>
                   </div>
-                </details>
+                </header>
 
-                <!-- Item 7 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Dispute Resolution</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Any disputes regarding referral attribution or commission
-                      calculations must be reported within 7 days. Our support
-                      team will investigate and resolve issues within 5 business
-                      days.
-                    </p>
-                  </div>
-                </details>
-              </div>
+                <div class="rar-form">
+  <!-- Wager -->
+  <div class="rar-field">
+    <label for="wager">Wager (USDT)</label>
+    <div class="rar-input-group">
+      <input
+        id="wager"
+        type="number"
+        min="0"
+        step="0.01"
+        value="1000"
+      />
+      <span class="rar-suffix">× 1%</span>
+    </div>
+  </div>
+
+  <!-- Commission Rate -->
+  <div class="rar-field">
+    <label for="rate">Commission Rate</label>
+    <div class="rar-input-group">
+      <input
+        id="rate"
+        type="number"
+        min="0"
+        max="100"
+        step="0.1"
+        value="25"
+      />
+      <span class="rar-suffix">%</span>
+    </div>
+  </div>
+
+  <!-- Game Dropdown -->
+  <div class="rar-field rar-field--full">
+    <label for="game">Game</label>
+    <div class="rar-select">
+      <select id="game">
+        <option value="0.28" selected>Original Games (28%)</option>
+        <option value="0.60">3rd Party Slots, Live Casino (60%)</option>
+        <option value="1.00">All Sports (100%)</option>
+      </select>
+      <span class="rar-caret">▾</span>
+    </div>
+  </div>
+
+  <!-- Result -->
+  <div class="rar-result">
+    <span>=</span>
+    <strong id="payout">0.70</strong>
+    <span>USDT</span>
+  </div>
+</div>
+
+              </section>
             </div>
-
-            <script>
-              (function () {
-                const nav = document.querySelector(".tab-navigation");
-                if (!nav) return;
-
-                // Convert mouse wheel vertical -> horizontal
-                nav.addEventListener(
-                  "wheel",
-                  (e) => {
-                    if (e.shiftKey) return;
-                    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                      e.preventDefault();
-                      nav.scrollLeft += e.deltaY;
-                    }
-                  },
-                  { passive: false }
-                );
-
-                // Click-drag to scroll
-                let isDown = false,
-                  startX = 0,
-                  startLeft = 0;
-                nav.addEventListener("mousedown", (e) => {
-                  isDown = true;
-                  nav.classList.add("dragging");
-                  startX = e.pageX;
-                  startLeft = nav.scrollLeft;
-                });
-                window.addEventListener("mousemove", (e) => {
-                  if (!isDown) return;
-                  e.preventDefault();
-                  nav.scrollLeft = startLeft - (e.pageX - startX);
-                });
-                window.addEventListener("mouseup", () => {
-                  isDown = false;
-                  nav.classList.remove("dragging");
-                });
-
-                // Touch drag (mobile)
-                let tX = 0,
-                  tLeft = 0;
-                nav.addEventListener(
-                  "touchstart",
-                  (e) => {
-                    const t = e.touches[0];
-                    tX = t.clientX;
-                    tLeft = nav.scrollLeft;
-                  },
-                  { passive: true }
-                );
-                nav.addEventListener(
-                  "touchmove",
-                  (e) => {
-                    const t = e.touches[0];
-                    nav.scrollLeft = tLeft - (t.clientX - tX);
-                  },
-                  { passive: true }
-                );
-
-                // When a tab is clicked, bring it into view (center-ish)
-                nav.addEventListener("click", (e) => {
-                  const item = e.target.closest(".tab-item");
-                  if (item)
-                    item.scrollIntoView({
-                      behavior: "smooth",
-                      inline: "center",
-                      block: "nearest",
-                    });
-                });
-              })();
-
-              // Tab functionality
-              document.addEventListener("DOMContentLoaded", function () {
-                // Initialize the dashboard tab as active
-                showTab("dashboard");
-
-                // Set up main tab click handlers
-                const mainTabItems = document.querySelectorAll(
-                  ".tab-navigation .tab-item[data-tab]"
-                );
-                mainTabItems.forEach((item) => {
-                  item.addEventListener("click", function () {
-                    const tabName = this.getAttribute("data-tab");
-                    showTab(tabName);
-                  });
-                });
-
-                // Initialize slider
-                initSlider();
-              });
-
-              function showTab(tabName) {
-                // Hide all tab contents
-                const tabContents = document.querySelectorAll(".tab-content");
-                tabContents.forEach((content) => {
-                  content.classList.remove("active");
-                });
-
-                // Remove active class from all tab items
-                const tabItems = document.querySelectorAll(
-                  ".tab-navigation .tab-item"
-                );
-                tabItems.forEach((item) => {
-                  item.classList.remove("active");
-                });
-
-                // Show selected tab content
-                const selectedTab = document.getElementById(tabName);
-                if (selectedTab) {
-                  selectedTab.classList.add("active");
-                }
-
-                // Activate the clicked tab item
-                const clickedTab = document.querySelector(
-                  `.tab-item[data-tab="${tabName}"]`
-                );
-                if (clickedTab) {
-                  clickedTab.classList.add("active");
-                }
-
-                // If we're showing the rewards tab, also initialize its first sub-tab
-                if (tabName === "rewards") {
-                  showSubTab("commisionByFriends");
-                }
-              }
-
-              function showSubTab(subTabName) {
-                // Hide all sub-tab contents
-                const subTabContents = document.querySelectorAll(".sub-tab");
-                subTabContents.forEach((content) => {
-                  content.classList.remove("active");
-                });
-
-                // Remove active class from all sub-tab items
-                const subTabItems = document.querySelectorAll(
-                  ".tab-item[data-subtab]"
-                );
-                subTabItems.forEach((item) => {
-                  item.classList.remove("active");
-                });
-
-                // Show selected sub-tab content
-                const selectedSubTab = document.getElementById(subTabName);
-                if (selectedSubTab) {
-                  selectedSubTab.classList.add("active");
-                }
-
-                // Activate the clicked sub-tab item
-                const clickedSubTab = document.querySelector(
-                  `.tab-item[data-subtab="${subTabName}"]`
-                );
-                if (clickedSubTab) {
-                  clickedSubTab.classList.add("active");
-                }
-              }
-
-              // Simple continuous scroll - always visible content
-              const scrollContainer =
-                document.getElementById("scrollContainer");
-
-              // Sample data for generating new rows
-              const sampleNames = [
-                "Anana blue",
-                "Sakib Khan",
-                "Rima",
-                "John",
-                "Maria",
-                "Ahmed",
-                "Lisa",
-                "Rahman",
-                "Fatima",
-                "David",
-                "Nasir",
-                "Sumon",
-                "Rashid",
-                "Ayesha",
-                "Karim",
-                "Nadia",
-                "Rahim",
-                "Sadia",
-                "Hasan",
-                "Marium",
-                "Tanvir",
-                "Ruhul",
-                "Shiuli",
-                "Babul",
-                "Nasreen",
-                "Khalil",
-                "Rashida",
-                "Shamim",
-              ];
-
-              const sampleLetters = [
-                "T",
-                "G",
-                "S",
-                "B",
-                "D",
-                "C",
-                "H",
-                "F",
-                "R",
-                "P",
-                "M",
-                "L",
-                "K",
-                "A",
-                "N",
-              ];
-
-              function getRandomName() {
-                return sampleNames[
-                  Math.floor(Math.random() * sampleNames.length)
-                ];
-              }
-
-              function getRandomPoints() {
-                return Math.floor(Math.random() * 20) + 1;
-              }
-
-              function getRandomLetter() {
-                return sampleLetters[
-                  Math.floor(Math.random() * sampleLetters.length)
-                ];
-              }
-
-              function createNewRow() {
-                const row = document.createElement("div");
-                row.className = "live-row";
-
-                // Create 3 columns with random data
-                for (let i = 0; i < 3; i++) {
-                  const p = document.createElement("p");
-                  const name = getRandomName();
-                  const points = getRandomPoints();
-                  const letter = getRandomLetter();
-
-                  p.innerHTML = `${name} <b>+${points}</b><span>${letter}</span>`;
-                  row.appendChild(p);
-                }
-
-                return row;
-              }
-
-              // Start animation immediately when page loads
-              document.addEventListener("DOMContentLoaded", function () {
-                // Ensure continuous visible scroll
-                scrollContainer.style.animationPlayState = "running";
-
-                // Periodically add new content to keep it fresh
-                setInterval(() => {
-                  // Add new rows at the end
-                  for (let i = 0; i < 3; i++) {
-                    const newRow = createNewRow();
-                    scrollContainer.appendChild(newRow);
-                  }
-
-                  // Keep performance optimal by limiting total rows
-                  const rows = scrollContainer.querySelectorAll(".live-row");
-                  while (rows.length > 40) {
-                    rows[0].remove();
-                    rows = scrollContainer.querySelectorAll(".live-row");
-                  }
-                }, 8000); // Add new content every 8 seconds
-              });
-
-              // Slider section start
-              let currentSlide = 0;
-              const totalSlides = 4;
-
-              function updateSlider() {
-                const sliderTrack = document.getElementById("sliderTrack");
-                const dots = document.querySelectorAll(".dot");
-
-                // Move slider
-                sliderTrack.style.transform = `translateX(-${
-                  currentSlide * 25
-                }%)`;
-
-                // Update dots
-                dots.forEach((dot, index) => {
-                  if (index === currentSlide) {
-                    dot.classList.add("active");
-                  } else {
-                    dot.classList.remove("active");
-                  }
-                });
-              }
-
-              function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlider();
-              }
-
-              function previousSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateSlider();
-              }
-
-              function goToSlide(slideIndex) {
-                currentSlide = slideIndex;
-                updateSlider();
-              }
-
-              // Auto-play slider every 5 seconds
-              setInterval(nextSlide, 5000);
-
-              // Initialize slider
-              updateSlider();
-
-              // Copy functionality for input fields
-              document.addEventListener("click", function (e) {
-                if (
-                  e.target.classList.contains("send-btn") &&
-                  e.target.textContent === "Copy"
-                ) {
-                  const input = e.target.previousElementSibling;
-                  if (input && input.classList.contains("send-input-text")) {
-                    input.select();
-                    document.execCommand("copy");
-
-                    // Provide visual feedback
-                    const originalText = e.target.textContent;
-                    e.target.textContent = "Copied!";
-                    setTimeout(() => {
-                      e.target.textContent = originalText;
-                    }, 2000);
-                  }
-                }
-              });
-            </script>
-          </section>
+          </div>
         </div>
       </div>
     </div>
+
+    <script>
+      (function () {
+        const nav = document.querySelector(".tab-navigation");
+        if (!nav) return;
+
+        // Convert mouse wheel vertical -> horizontal
+        nav.addEventListener(
+          "wheel",
+          (e) => {
+            if (e.shiftKey) return;
+            if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
+              e.preventDefault();
+              nav.scrollLeft += e.deltaY;
+            }
+          },
+          { passive: false }
+        );
+
+        // Click-drag to scroll
+        let isDown = false,
+          startX = 0,
+          startLeft = 0;
+        nav.addEventListener("mousedown", (e) => {
+          isDown = true;
+          nav.classList.add("dragging");
+          startX = e.pageX;
+          startLeft = nav.scrollLeft;
+        });
+        window.addEventListener("mousemove", (e) => {
+          if (!isDown) return;
+          e.preventDefault();
+          nav.scrollLeft = startLeft - (e.pageX - startX);
+        });
+        window.addEventListener("mouseup", () => {
+          isDown = false;
+          nav.classList.remove("dragging");
+        });
+
+        // Touch drag (mobile)
+        let tX = 0,
+          tLeft = 0;
+        nav.addEventListener(
+          "touchstart",
+          (e) => {
+            const t = e.touches[0];
+            tX = t.clientX;
+            tLeft = nav.scrollLeft;
+          },
+          { passive: true }
+        );
+        nav.addEventListener(
+          "touchmove",
+          (e) => {
+            const t = e.touches[0];
+            nav.scrollLeft = tLeft - (t.clientX - tX);
+          },
+          { passive: true }
+        );
+
+        // When a tab is clicked, bring it into view (center-ish)
+        nav.addEventListener("click", (e) => {
+          const item = e.target.closest(".tab-item");
+          if (item)
+            item.scrollIntoView({
+              behavior: "smooth",
+              inline: "center",
+              block: "nearest",
+            });
+        });
+      })();
+
+      // Tab functionality
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize the dashboard tab as active
+        showTab("dashboard");
+
+        // Set up main tab click handlers
+        const mainTabItems = document.querySelectorAll(
+          ".tab-navigation .tab-item[data-tab]"
+        );
+        mainTabItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const tabName = this.getAttribute("data-tab");
+            showTab(tabName);
+          });
+        });
+
+        // Initialize slider
+        initSlider();
+      });
+
+      function showTab(tabName) {
+        // Hide all tab contents
+        const tabContents = document.querySelectorAll(".tab-content");
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Remove active class from all tab items
+        const tabItems = document.querySelectorAll(".tab-navigation .tab-item");
+        tabItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Show selected tab content
+        const selectedTab = document.getElementById(tabName);
+        if (selectedTab) {
+          selectedTab.classList.add("active");
+        }
+
+        // Activate the clicked tab item
+        const clickedTab = document.querySelector(
+          `.tab-item[data-tab="${tabName}"]`
+        );
+        if (clickedTab) {
+          clickedTab.classList.add("active");
+        }
+
+        // If we're showing the rewards tab, also initialize its first sub-tab
+        if (tabName === "rewards") {
+          showSubTab("commisionByFriends");
+        }
+      }
+
+      function showSubTab(subTabName) {
+        // Hide all sub-tab contents
+        const subTabContents = document.querySelectorAll(".sub-tab");
+        subTabContents.forEach((content) => {
+          content.classList.remove("active");
+        });
+
+        // Remove active class from all sub-tab items
+        const subTabItems = document.querySelectorAll(".tab-item[data-subtab]");
+        subTabItems.forEach((item) => {
+          item.classList.remove("active");
+        });
+
+        // Show selected sub-tab content
+        const selectedSubTab = document.getElementById(subTabName);
+        if (selectedSubTab) {
+          selectedSubTab.classList.add("active");
+        }
+
+        // Activate the clicked sub-tab item
+        const clickedSubTab = document.querySelector(
+          `.tab-item[data-subtab="${subTabName}"]`
+        );
+        if (clickedSubTab) {
+          clickedSubTab.classList.add("active");
+        }
+      }
+
+      // Simple continuous scroll - always visible content
+      const scrollContainer = document.getElementById("scrollContainer");
+
+      // Sample data for generating new rows
+      const sampleNames = [
+        "Anana blue",
+        "Sakib Khan",
+        "Rima",
+        "John",
+        "Maria",
+        "Ahmed",
+        "Lisa",
+        "Rahman",
+        "Fatima",
+        "David",
+        "Nasir",
+        "Sumon",
+        "Rashid",
+        "Ayesha",
+        "Karim",
+        "Nadia",
+        "Rahim",
+        "Sadia",
+        "Hasan",
+        "Marium",
+        "Tanvir",
+        "Ruhul",
+        "Shiuli",
+        "Babul",
+        "Nasreen",
+        "Khalil",
+        "Rashida",
+        "Shamim",
+      ];
+
+      const sampleLetters = [
+        "T",
+        "G",
+        "S",
+        "B",
+        "D",
+        "C",
+        "H",
+        "F",
+        "R",
+        "P",
+        "M",
+        "L",
+        "K",
+        "A",
+        "N",
+      ];
+
+      function getRandomName() {
+        return sampleNames[Math.floor(Math.random() * sampleNames.length)];
+      }
+
+      function getRandomPoints() {
+        return Math.floor(Math.random() * 20) + 1;
+      }
+
+      function getRandomLetter() {
+        return sampleLetters[Math.floor(Math.random() * sampleLetters.length)];
+      }
+
+      function createNewRow() {
+        const row = document.createElement("div");
+        row.className = "live-row";
+
+        // Create 3 columns with random data
+        for (let i = 0; i < 3; i++) {
+          const p = document.createElement("p");
+          const name = getRandomName();
+          const points = getRandomPoints();
+          const letter = getRandomLetter();
+
+          p.innerHTML = `${name} <b>+${points}</b><span>${letter}</span>`;
+          row.appendChild(p);
+        }
+
+        return row;
+      }
+
+      // Start animation immediately when page loads
+      document.addEventListener("DOMContentLoaded", function () {
+        // Ensure continuous visible scroll
+        scrollContainer.style.animationPlayState = "running";
+
+        // Periodically add new content to keep it fresh
+        setInterval(() => {
+          // Add new rows at the end
+          for (let i = 0; i < 3; i++) {
+            const newRow = createNewRow();
+            scrollContainer.appendChild(newRow);
+          }
+
+          // Keep performance optimal by limiting total rows
+          const rows = scrollContainer.querySelectorAll(".live-row");
+          while (rows.length > 40) {
+            rows[0].remove();
+            rows = scrollContainer.querySelectorAll(".live-row");
+          }
+        }, 8000); // Add new content every 8 seconds
+      });
+
+      // Slider section start
+      let currentSlide = 0;
+      const totalSlides = 4;
+
+      function updateSlider() {
+        const sliderTrack = document.getElementById("sliderTrack");
+        const dots = document.querySelectorAll(".dot");
+
+        // Move slider
+        sliderTrack.style.transform = `translateX(-${currentSlide * 25}%)`;
+
+        // Update dots
+        dots.forEach((dot, index) => {
+          if (index === currentSlide) {
+            dot.classList.add("active");
+          } else {
+            dot.classList.remove("active");
+          }
+        });
+      }
+
+      function nextSlide() {
+        currentSlide = (currentSlide + 1) % totalSlides;
+        updateSlider();
+      }
+
+      function previousSlide() {
+        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+        updateSlider();
+      }
+
+      function goToSlide(slideIndex) {
+        currentSlide = slideIndex;
+        updateSlider();
+      }
+
+      // Auto-play slider every 5 seconds
+      setInterval(nextSlide, 5000);
+
+      // Initialize slider
+      updateSlider();
+
+      // Copy functionality for input fields
+      document.addEventListener("click", function (e) {
+        if (
+          e.target.classList.contains("send-btn") &&
+          e.target.textContent === "Copy"
+        ) {
+          const input = e.target.previousElementSibling;
+          if (input && input.classList.contains("send-input-text")) {
+            input.select();
+            document.execCommand("copy");
+
+            // Provide visual feedback
+            const originalText = e.target.textContent;
+            e.target.textContent = "Copied!";
+            setTimeout(() => {
+              e.target.textContent = originalText;
+            }, 2000);
+          }
+        }
+      });
+
+
+      // simple calculator logic – mirrors the screenshot math
+  (function () {
+    const $wager = document.getElementById('wager');
+    const $rate  = document.getElementById('rate');
+    const $game  = document.getElementById('game');
+    const $out   = document.getElementById('payout');
+
+    const fmt = (n) => (Math.round(n * 100) / 100).toFixed(2);
+
+    function compute() {
+      const wager = parseFloat($wager.value || 0);
+      const rate  = parseFloat($rate.value || 0) / 100;   // e.g. 25% => 0.25
+      const gameK = parseFloat($game.value || 0);         // 0.28, 0.60, 1.00
+      // Formula from UI: Wager × 1% × Commission Rate × Game Multiplier
+      const res = wager * 0.01 * rate * gameK;
+      $out.textContent = fmt(res);
+    }
+    [$wager, $rate, $game].forEach(el => el.addEventListener('input', compute));
+    compute();
+  })();
+    </script>
   </body>
 </html>
