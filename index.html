@@ -1,1207 +1,391 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Affiliate Card</title>
-    <link rel="stylesheet" href="Styles/affiliate-card.css" />
-    <link rel="stylesheet" href="Styles/live-reword.css" />
-    <link rel="stylesheet" href="Styles/send.css" />
-    <link rel="stylesheet" href="Styles/faq.css" />
-    <link rel="stylesheet" href="Styles/slider.css" />
-    <link rel="stylesheet" href="Styles/total-reward.css" />
-    <link rel="stylesheet" href="Styles/refferral.css" />
-  </head>
-  <body>
-    <div class="container">
-      <!-- total reward section -->
-
-      <div class="affiliate card">
-        <!-- Header with Back Arrow -->
-        <div class="card-header">
-          <button class="back-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-            </svg>
-          </button>
-          <h2>Affiliate</h2>
-        </div>
-
-        <!-- Slider Section -->
-        <div class="slider-container">
-          <div class="slider-track" id="sliderTrack">
-            <!-- Slide 1 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-01.png" alt="slider 1" />
-              </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-02.jpg" alt="slider 2" />
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-03.jpg" alt="slider 3" />
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-04.webp" alt="slider 4" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Navigation Arrows -->
-          <!-- <div class="nav-arrow left" onclick="previousSlide()">❮</div>
-          <div class="nav-arrow right" onclick="nextSlide()">❯</div> -->
-        </div>
-
-        <!-- Dots Navigation -->
-        <div class="dots-container" id="dotsContainer">
-          <div class="dot active" onclick="goToSlide(0)"></div>
-          <div class="dot" onclick="goToSlide(1)"></div>
-          <div class="dot" onclick="goToSlide(2)"></div>
-          <div class="dot" onclick="goToSlide(3)"></div>
-        </div>
-
-        <!-- menu bar section -->
-        <!-- <div class="slider-card-container">
-          <div class="slider-card">
-            <img src="assets/image/Home.png" alt="" />
-            <p>Dashboard</p>
-          </div>
-          <div class="slider-card">
-            <img src="assets/image/recent.png" alt="" />
-            <p>My Rewards</p>
-          </div>
-          <div class="slider-card">
-            <img src="assets/image/rb.png" alt="" />
-            <p>Referral Cods and friends </p>
-          </div>
-          <div class="slider-card">
-            <img src="assets/image/rb.png" alt="" />
-            <p>Rate & Rules </p>
-          </div>
-        </div> -->
-
-        <!-- Tab Navigation (Scrollable Menu Bar) -->
-        <div class="tab-navigation">
-          <div class="tab-item active" onclick="showTab('dashboard')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </svg>
-            <p>Dashboard</p>
-          </div>
-          <div class="tab-item" onclick="showTab('rewards')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-              />
-            </svg>
-            <p>My Rewards</p>
-          </div>
-          <div class="tab-item" onclick="showTab('referrals')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.06 7H16.5c-.83 0-1.5-.67-1.5-1.5S15.67 4 16.5 4h2c1.1 0 2 .9 2 2 0 .74-.4 1.38-1 1.73V22h-1zm-12.5 0c-.83 0-1.5-.67-1.5-1.5S6.67 19 7.5 19s1.5.67 1.5 1.5S8.33 22 7.5 22zm3-7H8l1.38-4.5H11V22h-1zm6-9H9.5c-.83 0-1.5.67-1.5 1.5S8.67 8 9.5 8H16v-1z"
-              />
-            </svg>
-            <p>Referral Codes & Friends</p>
-          </div>
-          <div class="tab-item" onclick="showTab('rates')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-              />
-            </svg>
-            <p>Rate & Rules</p>
-          </div>
-        </div>
-        <!-- <div class="tab-navigation">
-          <div class="tab-item active" data-tab="dashboard" onclick="showTab('dashboard')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
-            </svg>
-            <p>Dashboard</p>
-          </div>
-          <div class="tab-item" data-tab="rewards"  onclick="showTab('rewards')">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-              />
-            </svg>
-            <p>My Rewards</p>
-          </div>
-          <div class="tab-item" data-tab="referrals">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A3 3 0 0 0 17.06 7H16.5c-.83 0-1.5-.67-1.5-1.5S15.67 4 16.5 4h2c1.1 0 2 .9 2 2 0 .74-.4 1.38-1 1.73V22h-1zm-12.5 0c-.83 0-1.5-.67-1.5-1.5S6.67 19 7.5 19s1.5.67 1.5 1.5S8.33 22 7.5 22zm3-7H8l1.38-4.5H11V22h-1zm6-9H9.5c-.83 0-1.5.67-1.5 1.5S8.67 8 9.5 8H16v-1z"
-              />
-            </svg>
-            <p>Referral Codes & Friends</p>
-          </div>
-          <div class="tab-item" data-tab="rates">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"
-              />
-            </svg>
-            <p>Rate & Rules</p>
-          </div>
-        </div> -->
-
-        <!-- Tab Content -->
-
-        <!-- My Rewards Tab -->
-        <div id="dashboard" class="tab-content">
-          <!-- Dashboard Tab start -->
-          <!-- Learn more about our Affiliate Program -->
-          <div id="dashboard" class="affiliate-card-bdt tab-content">
-            <h3 class="learn-title">
-              Invite Friend to Get <br />
-              <!-- <span>Affiliate Program</span> -->
-            </h3>
-            <div class="invite-friend">
-              <p>$1250 +25%</p>
-              <p>+25%</p>
-            </div>
-            <div class="invite-friend-title">
-              <p>Referral Rewards</p>
-              <p>Commission Rewards</p>
-            </div>
-
-            <p class="learn-subtitle">
-              Get $1250 for each friend you invite, plus up to 25% commission on
-              their wagers. Enjoy consistent commission, whether they win or
-              lose, in our Casino and Sportsbook. Start earning now!
-            </p>
-
-            <div class="refrerral-container">
-              <h2>Referral Link</h2>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="text"
-                  placeholder="https//: rellbet.com/i-...o-n/"
-                />
-                <button class="send-btn">Copy</button>
-              </div>
-            </div>
-
-            <div class="refrerral-container">
-              <h2>Referral Code</h2>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="text"
-                  placeholder="32g5trg"
-                />
-                <button class="send-btn">Copy</button>
-              </div>
-            </div>
-
-            <div class="share-link-container">
-              <p>Share via social</p>
-              <div class="share-link-img">
-                <img src="assets/image/fb.png" alt="" />
-                <img src="assets/image/wp.png" alt="" />
-                <img src="assets/image/in.png" alt="" />
-                <img src="assets/image/x.png" alt="" />
-                <img src="assets/image/tel.png" alt="" />
-                <img src="assets/image/yb.png" alt="" />
-              </div>
-              <button>Referral Terms & Conditions</button>
-            </div>
-          </div>
-
-          <!-- total reward section -->
-          <div class="total-reward">
-            <div class="total-card">
-              <div class="total-item">
-                <img class="total-img" src="assets/man.png" alt="" />
-                <div class="total-label">Total Reward</div>
-                <div class="total-value">$0.00</div>
-              </div>
-              <div class="total-item">
-                <img class="total-img" src="assets/Frame (1).png" alt="" />
-                <div class="total-label">Total Friend</div>
-                <div class="total-value">0</div>
-              </div>
-            </div>
-          </div>
-          <div class="total-reward">
-            <div class="total-card commision">
-              <div class="total-item">
-                <img class="total-img" src="assets/Frame (2).png" alt="" />
-                <div class="total-label">Referral Reward</div>
-                <div class="total-value">$0.00</div>
-              </div>
-              <div class="total-item">
-                <img class="total-img" src="assets/Frame (3).png" alt="" />
-                <div class="total-label">Commission Reward</div>
-                <div class="total-value">$0.00</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- refferal activitise section -->
-          <div class="referral">
-            <div class="referral-card">
-              <h4 class="referral-title">Referral Activities</h4>
-              <div>
-                <img class="referral-img" src="assets/Frame (4).png" alt="" />
-                <p class="referral-dec">No info yet</p>
-                <p class="referral-dec">Invite friends join you now!</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Live Rewards Section -->
-          <!-- <div class="live-rewards">
-          <div class="live-header">
-            <span class="live-icon">
-              <img src="assets/image/live-icon.png" alt="" />
-            </span>
-            <h3>Live Rewards</h3>
-          </div>
-
-          <div class="live-summary">
-            <span
-              >Total Rewards Sent To- <br />
-              Date</span
-            >
-            <span class="live-amount">BDT 341, 20.46K</span>
-          </div>
-
-          <div class="live-list" id="liveList">
-            <div class="live-scroll-container" id="scrollContainer">
-              
-              <div class="live-row">
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Mannu <b>+7</b><span>T</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Sakib Khan <b>+12</b><span>G</span></p>
-                <p>Rima <b>+5</b><span>S</span></p>
-                <p>John <b>+8</b><span>B</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Maria <b>+15</b><span>D</span></p>
-                <p>Ahmed <b>+3</b><span>C</span></p>
-                <p>Lisa <b>+9</b><span>H</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Rahman <b>+6</b><span>F</span></p>
-                <p>Fatima <b>+11</b><span>R</span></p>
-                <p>David <b>+4</b><span>P</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Nasir <b>+13</b><span>M</span></p>
-                <p>Sumon <b>+2</b><span>L</span></p>
-                <p>Rashid <b>+10</b><span>K</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Ayesha <b>+9</b><span>A</span></p>
-                <p>Karim <b>+14</b><span>K</span></p>
-                <p>Nadia <b>+6</b><span>N</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Rahim <b>+8</b><span>R</span></p>
-                <p>Sadia <b>+11</b><span>S</span></p>
-                <p>Hasan <b>+5</b><span>H</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Marium <b>+16</b><span>M</span></p>
-                <p>Tanvir <b>+7</b><span>T</span></p>
-                <p>Ruhul <b>+12</b><span>R</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Shiuli <b>+4</b><span>S</span></p>
-                <p>Babul <b>+13</b><span>B</span></p>
-                <p>Nasreen <b>+9</b><span>N</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Khalil <b>+10</b><span>K</span></p>
-                <p>Rashida <b>+8</b><span>R</span></p>
-                <p>Shamim <b>+15</b><span>S</span></p>
-              </div>
-
-              
-              <div class="live-row">
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Anana blue <b>+7</b><span>T</span></p>
-                <p>Mannu <b>+7</b><span>T</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Sakib Khan <b>+12</b><span>G</span></p>
-                <p>Rima <b>+5</b><span>S</span></p>
-                <p>John <b>+8</b><span>B</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Maria <b>+15</b><span>D</span></p>
-                <p>Ahmed <b>+3</b><span>C</span></p>
-                <p>Lisa <b>+9</b><span>H</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Rahman <b>+6</b><span>F</span></p>
-                <p>Fatima <b>+11</b><span>R</span></p>
-                <p>David <b>+4</b><span>P</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Nasir <b>+13</b><span>M</span></p>
-                <p>Sumon <b>+2</b><span>L</span></p>
-                <p>Rashid <b>+10</b><span>K</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Ayesha <b>+9</b><span>A</span></p>
-                <p>Karim <b>+14</b><span>K</span></p>
-                <p>Nadia <b>+6</b><span>N</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Rahim <b>+8</b><span>R</span></p>
-                <p>Sadia <b>+11</b><span>S</span></p>
-                <p>Hasan <b>+5</b><span>H</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Marium <b>+16</b><span>M</span></p>
-                <p>Tanvir <b>+7</b><span>T</span></p>
-                <p>Ruhul <b>+12</b><span>R</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Shiuli <b>+4</b><span>S</span></p>
-                <p>Babul <b>+13</b><span>B</span></p>
-                <p>Nasreen <b>+9</b><span>N</span></p>
-              </div>
-
-              <div class="live-row">
-                <p>Khalil <b>+10</b><span>K</span></p>
-                <p>Rashida <b>+8</b><span>R</span></p>
-                <p>Shamim <b>+15</b><span>S</span></p>
-              </div>
-            </div>
-          </div>
-        </div> -->
-
-          <!-- Learn more about our Affiliate Program -->
-          <div class="affiliate-card-bdt">
-            <h3 class="learn-title">
-              Learn more about our <br />
-              <span>Affiliate Program</span>
-            </h3>
-
-            <div class="bdt-image-box">
-              <img
-                src="assets/image/affiliate-program.png"
-                alt="100 Mil Reais"
-              />
-            </div>
-            <p class="learn-subtitle">
-              Contrary to popular belief, Lorem Ipsum is not simply random text.
-              It has roots in a piece of classical Latin literature from 45 BC,
-              making it over 2000 years old. Richard McClintock, a Latin
-              professor at Hampden-Sydney College in Virginia,
-            </p>
-
-            <div class="send-input-row">
-              <input
-                class="send-input-text"
-                type="business@rb.game"
-                placeholder="business@rb.game"
-              />
-              <button class="send-btn">Send Now</button>
-            </div>
-          </div>
-
-          <!-- send section -->
-          <section class="send">
-            <div class="send-card">
-              <div class="send-row">
-                <img
-                  src="assets/image/Whatsapp.png"
-                  alt="whatsapp"
-                  class="whatsapp-logo"
-                />
-
-                <div class="send-desc">
-                  <div class="send-title">Whatsapp</div>
-                  <div>
-                    Tap “Send Now” for deals on <br />
-                    WhatsApp. Fast & trusted service!
-                  </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Styles/referral-code.css">
+    <title>Referral Code System</title>
+ 
+</head>
+<body>
+    <section class="referral-code-container">
+        <!-- =================== MAIN VIEW =================== -->
+        <div class="main-view" id="mainView">
+            <div class="card">
+                <div class="row">
+                    <div class="col">
+                        <div class="label">Referral Code Created</div>
+                        <div class="number">5/20</div>
+                    </div>
+                    <div class="col">
+                        <div class="label">Friends</div>
+                        <div class="number">0</div>
+                    </div>
                 </div>
-              </div>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="send-text"
-                  placeholder="send offer"
-                />
-                <button class="send-btn">Send Now</button>
-              </div>
+                <button class="btn" id="createBtn">Create Code</button>
             </div>
-            <div class="send-card">
-              <div class="send-row">
-                <img
-                  src="assets/image/Telegram.png"
-                  alt="whatsapp"
-                  class="whatsapp-logo"
-                />
 
-                <div class="send-desc">
-                  <div class="send-title">Telegram</div>
-                  <div>
-                    Tap “Send Now” to get deals on <br />
-                    Telegram. Fast & secure service!
-                  </div>
+            <!-- Popup Overlay -->
+            <div class="overlay" id="overlay">
+                <div class="popup">
+                    <div class="popup-header">
+                        <h3>Create Code</h3>
+                        <button class="close-btn" id="closeBtn">&times;</button>
+                    </div>
+                    <label>Campaign Name (Optional)</label>
+                    <input type="text" placeholder="Enter Campaign Name" id="campaignInput">
+                    <button class="create-btn" id="createCampaignBtn">Create campaign</button>
                 </div>
-              </div>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="send-text"
-                  placeholder="send offer"
-                />
-                <button class="send-btn">Send Now</button>
-              </div>
             </div>
-            <div class="send-card">
-              <div class="send-row">
-                <img
-                  src="assets/image/Frame.png"
-                  alt="whatsapp"
-                  class="whatsapp-logo"
-                />
 
-                <div class="send-desc">
-                  <div class="send-title">Email</div>
-                  <div class="send-descrip">
-                    Tap “Send Now” to email us for the best deals. Quick reply!
-                  </div>
+            <div class="table-container">
+                <!-- Table Header -->
+                <div class="table-header">
+                    <div class="header-name">Name</div>
+                    <div class="header-code">Code</div>
+                
+                    <div class="header-referrals">Referrals</div>
                 </div>
-              </div>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="send-text"
-                  placeholder="send offer"
-                />
-                <button class="send-btn">Send Now</button>
-              </div>
+
+                <!-- Table Rows -->
+                <div class="table-row">
+                    <div class="col-name">--</div>
+                    <div class="col-code">
+                        40gldhtwl
+                        <div class="copy-icon" title="Copy Code"></div>
+                    </div>
+                
+                    <div class="col-referrals" data-code="40gldhtwl" data-link="https://bc.game/i-40gldhtwl-n/" data-date="2025-08-27 09:53:23">
+                        0
+                        <div class="arrow-icon">›</div>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-name">--</div>
+                    <div class="col-code">
+                        40gral793
+                        <div class="copy-icon" title="Copy Code"></div>
+                    </div>
+               
+                    <div class="col-referrals" data-code="40gral793" data-link="https://bc.game/i-40gral793-n/" data-date="2025-08-27 10:15:45">
+                        0
+                        <div class="arrow-icon">›</div>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-name">--</div>
+                    <div class="col-code">
+                        40graldhd
+                        <div class="copy-icon" title="Copy Code"></div>
+                    </div>
+                 
+                    <div class="col-referrals" data-code="40graldhd" data-link="https://bc.game/i-40graldhd-n/" data-date="2025-08-27 11:22:12">
+                        0
+                        <div class="arrow-icon">›</div>
+                    </div>
+                </div>
+
+                <div class="table-row">
+                    <div class="col-name">--</div>
+                    <div class="col-code">
+                        40gralo6c
+                        <div class="copy-icon" title="Copy Code"></div>
+                    </div>
+                
+                    <div class="col-referrals" data-code="40gralo6c" data-link="https://bc.game/i-40gralo6c-n/" data-date="2025-08-27 12:05:33">
+                        0
+                        <div class="arrow-icon">›</div>
+                    </div>
+                </div>
             </div>
-          </section>
-
-          <!-- faq section -->
-          <section class="faq" aria-labelledby="faq__heading">
-            <div class="faq__container">
-              <h2 id="faq__heading" class="faq__title">Learn more about our</h2>
-
-              <div class="faq__panel" role="list">
-                <!-- Item 1 (open) -->
-                <details class="faq-item" open>
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >How does the referral system work?</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      When you share your referral link with any of your
-                      friends, family or advertise the link and a player signs
-                      up at our site that player becomes your referral and they
-                      will earn you commission & extra rewards by playing at
-                      BC.GAME.
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 2 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Here are many variations of ?</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Engage in chat conversations throughout the day to receive
-                      free coins as part of the Constant Chat Rains bonus.
-                      <br />
-                      Rules: <br />
-                      There are many variations of online casino games including
-                      slots, table games, live dealer experiences, and special
-                      promotions tailored to different player preferences.
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 3 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Comes from a line in section</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      This information comes directly from our promotions and
-                      bonus section, where we clearly outline how each offer
-                      works and what benefits players can claim
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 4 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >How does the referral system work ?</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      You may tip other players once you reach VIP Level 8.
-                      Tipping is how you show appreciation and share your
-                      generosity with other players in BC.GAME. You can decide
-                      how much you want to send to the other players.
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 5 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Here are many variations of ?</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      There are many variations of online casino games including
-                      slots, table games, live dealer experiences, and special
-                      promotions tailored to different player preferences.
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 6 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >How does the referral system work ?</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      When you share your referral link and a friend registers
-                      and plays, they become your referral. You earn commissions
-                      and extra rewards based on their activity on our platform.
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 7 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >What is ‘Sports Weekly Bonus’?</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      The Sports Weekly Bonus is a special reward for players
-                      who place sports bets throughout the week, giving them
-                      cashback or free bet opportunities every week.
-                    </p>
-                  </div>
-                </details>
-              </div>
-            </div>
-          </section>
-          <!-- Dashboard tab section end -->
         </div>
 
-        <!-- My Rewards Tab -->
-        <div id="rewards" class="tab-content">
-          <!-- total reward section -->
-          <div class="total-reward">
-            <div class="total-card">
-              <div class="total-item">
-                <img
-                  class="total-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo="
-                  alt=""
-                />
-                <div class="total-label">Total Reward</div>
-                <div class="total-value">$0.00</div>
-              </div>
-              <div class="total-item">
-                <img
-                  class="total-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4K"
-                  alt=""
-                />
-                <div class="total-label">Total Friend</div>
-                <div class="total-value">0</div>
-              </div>
+        <!-- =================== DETAILS VIEW =================== -->
+        <div class="details-view" id="detailsView">
+            <!-- Header -->
+            <div class="header">
+                <button class="back-btn" id="backBtn">‹</button>
+                <div class="header-title">Referral Code Details</div>
             </div>
-          </div>
-          <div class="total-reward">
-            <div class="total-card commision">
-              <div class="total-item">
-                <img
-                  class="total-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo="
-                  alt=""
-                />
-                <div class="total-label">Referral Reward</div>
-                <div class="total-value">$0.00</div>
-              </div>
-              <div class="total-item">
-                <img
-                  class="total-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo="
-                  alt=""
-                />
-                <div class="total-label">Commission Reward</div>
-                <div class="total-value">$0.00</div>
-              </div>
-            </div>
-          </div>
 
-          <!-- refferal activitise section -->
-          <div class="referral">
-            <div class="referral-card">
-              <h4 class="referral-title">My Reward Activities</h4>
-              <div>
-                <img
-                  class="referral-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDJsMS4wOSAyLjI2TDE2IDUuMTFsLTEuOTUgMS45IDQuNjMgMi44M0wxMiAxNmwtNi42OCAzLjg0TDEwIDEzTDYgMTFsMi45MS0uODV6Ii8+Cjwvc3ZnPgo="
-                  alt=""
-                />
-                <p class="referral-dec">No rewards yet</p>
-                <p class="referral-dec">Start earning rewards now!</p>
-              </div>
+            <!-- Main Content -->
+            <div class="content">
+                <!-- Details Rows -->
+                <div class="detail-row">
+                    <div class="detail-label">Name</div>
+                    <div class="detail-value">--</div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Code</div>
+                    <div class="detail-value">
+                        <span id="detailCode">40gldhtwl</span>
+                        <div class="details-copy-icon" onclick="copyToClipboard('code')" title="Copy Code"></div>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Link</div>
+                    <div class="detail-value">
+                        <span id="detailLink">https://bc.game/i-40gldhtwl-n/</span>
+                        <div class="details-copy-icon" onclick="copyToClipboard('link')" title="Copy Link"></div>
+                    </div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Date Created</div>
+                    <div class="detail-value" id="detailDate">2025-08-27 09:53:23</div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Referrals</div>
+                    <div class="detail-value">0</div>
+                </div>
+
+                <div class="detail-row">
+                    <div class="detail-label">Commission Rate</div>
+                    <div class="detail-value">25%</div>
+                </div>
+
+                <!-- Wager Section -->
+                <div class="wager-section">
+                    <div class="wager-header">Wager</div>
+                    
+                    <div class="wager-item">
+                        <div class="wager-label">BC Originals ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+
+                    <div class="wager-item">
+                        <div class="wager-label">Live Casino & 3rd Party Slots ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+
+                    <div class="wager-item">
+                        <div class="wager-label">Sports ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+                    
+                    <div class="wager-item total-wager">
+                      
+                        <div class="wager-label">Total Wager ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+                </div>
+                <div class="wager-section">
+                    <div class="wager-header">Commision</div>
+                    
+                    <div class="wager-item">
+                        <div class="wager-label">BC Originals ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+
+                    <div class="wager-item">
+                        <div class="wager-label">Live Casino & 3rd Party Slots ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+
+                    <div class="wager-item">
+                        <div class="wager-label">Sports ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+                    
+                    <div class="wager-item total-wager">
+                      
+                        <div class="wager-label">Total Wager ($)</div>
+                        <div class="wager-value">--</div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
+    </section>
 
-        <!-- Referral Codes & Friends Tab -->
-        <div id="referrals" class="tab-content">
-          <div class="affiliate-card-bdt">
-            <h3 class="learn-title">
-              Referral Codes & <br />
-              <span>Friends Management</span>
-            </h3>
+    <script>
+        const overlay = document.getElementById("overlay");
+        const createBtn = document.getElementById("createBtn");
+        const closeBtn = document.getElementById("closeBtn");
+        const createCampaignBtn = document.getElementById("createCampaignBtn");
+        const campaignInput = document.getElementById("campaignInput");
+        const mainView = document.getElementById('mainView');
+        const detailsView = document.getElementById('detailsView');
+        const backBtn = document.getElementById('backBtn');
+        const detailCode = document.getElementById('detailCode');
+        const detailLink = document.getElementById('detailLink');
+        const detailDate = document.getElementById('detailDate');
 
-            <div class="refrerral-container">
-              <h2>My Referral Code</h2>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="text"
-                  value="REF32G5TRG"
-                  readonly
-                />
-                <button class="send-btn">Copy</button>
-              </div>
-            </div>
+        // Show popup with smooth animation
+        createBtn.addEventListener("click", () => {
+            overlay.style.display = "flex";
+            setTimeout(() => {
+                overlay.classList.add("show");
+                setTimeout(() => {
+                    campaignInput.focus();
+                }, 300);
+            }, 10);
+        });
 
-            <div class="refrerral-container">
-              <h2>Generate New Code</h2>
-              <div class="send-input-row">
-                <input
-                  class="send-input-text"
-                  type="text"
-                  placeholder="Enter custom code (optional)"
-                />
-                <button class="send-btn">Generate</button>
-              </div>
-            </div>
+        // Hide popup
+        function hidePopup() {
+            overlay.classList.remove("show");
+            setTimeout(() => {
+                overlay.style.display = "none";
+                campaignInput.value = "";
+            }, 300);
+        }
 
-            <div class="bdt-image-box">
-              <img
-                src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjEyMCIgdmlld0JveD0iMCAwIDIwMCAxMjAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTIwIiBmaWxsPSIjMDBmZjg4IiBvcGFjaXR5PSIwLjEiLz4KPHN2ZyB4PSI4NSIgeT0iNDUiIHdpZHRoPSIzMCIgaGVpZ2h0PSIzMCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSIjMDBmZjg4Ij4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4KPC9zdmc+Cg=="
-                alt="Friends Network"
-              />
-            </div>
+        // Close button click
+        closeBtn.addEventListener("click", hidePopup);
 
-            <p class="learn-subtitle">
-              Manage your referral codes and track your friends' activities. You
-              can generate multiple codes for different campaigns and see
-              detailed statistics for each one.
-            </p>
-          </div>
+        // Click outside popup to close
+        overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) {
+                hidePopup();
+            }
+        });
 
-          <!-- Friends List -->
-          <div class="referral">
-            <div class="referral-card">
-              <h4 class="referral-title">My Friends</h4>
-              <div>
-                <img
-                  class="referral-img"
-                  src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iIzAwZmY4OCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyIDEyYzIuMjEgMCA0LTEuNzkgNC00cy0xLjc5LTQtNC00LTQgMS43OS00IDQgMS43OSA0IDQgNHptMCAyYy0yLjY3IDAtOCAxLjM0LTggNHYyaDE2di0yYzAtMi42Ni01LjMzLTQtOC00eiIvPgo8L3N2Zz4K"
-                  alt=""
-                />
-                <p class="referral-dec">No friends referred yet</p>
-                <p class="referral-dec">Share your code to start earning!</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        // Create campaign button
+        createCampaignBtn.addEventListener("click", () => {
+            const campaignName = campaignInput.value.trim();
+            if (campaignName) {
+                showToast(`Campaign "${campaignName}" created successfully!`);
+            } else {
+                showToast("Campaign created successfully!");
+            }
+            hidePopup();
+        });
 
-        <!-- Rate & Rules Tab -->
-        <div id="rates" class="tab-content">
-          <!-- FAQ section for rates and rules -->
-          <section class="faq" aria-labelledby="faq__heading">
-            <div class="faq__container">
-              <h2 id="faq__heading" class="faq__title">Rates & Rules</h2>
+        // Handle Enter key in input
+        campaignInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                createCampaignBtn.click();
+            }
+        });
 
-              <div class="faq__panel" role="list">
-                <!-- Item 1 (open) -->
-                <details class="faq-item" open>
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Commission Rates Structure</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Tier 1: 10% commission on first $1,000 wagered<br />
-                      Tier 2: 15% commission on $1,001 - $5,000 wagered<br />
-                      Tier 3: 20% commission on $5,001 - $10,000 wagered<br />
-                      Tier 4: 25% commission on $10,000+ wagered
-                    </p>
-                  </div>
-                </details>
+        // Handle Escape key to close popup
+        document.addEventListener("keydown", (e) => {
+            if (e.key === "Escape" && overlay.classList.contains("show")) {
+                hidePopup();
+            }
+        });
 
-                <!-- Item 2 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Referral Bonus Rules</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      $1250 bonus paid when referred friend makes their first
-                      deposit of $100 or more and places at least $500 in bets
-                      within 30 days. Bonus is paid within 48 hours of
-                      qualifying activity completion.
-                    </p>
-                  </div>
-                </details>
+        // Show details view function
+        function showDetails(rowData) {
+            // Update details with selected row data
+            detailCode.textContent = rowData.code;
+            detailLink.textContent = rowData.link;
+            detailDate.textContent = rowData.date;
 
-                <!-- Item 3 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Payment Schedule</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Commissions are calculated weekly (Sunday to Saturday) and
-                      paid out every Tuesday. Minimum payout threshold is $50.
-                      Payments are made via the same method as your account
-                      deposits.
-                    </p>
-                  </div>
-                </details>
+            // Hide main view and show details view
+            mainView.classList.add('hidden');
+            detailsView.classList.add('show');
+        }
 
-                <!-- Item 4 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Tracking & Attribution</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Referrals are tracked using cookies (30-day expiry) and
-                      referral codes (permanent attribution). If a user clicks
-                      your link and signs up within 30 days, you get credit even
-                      without using your code.
-                    </p>
-                  </div>
-                </details>
+        // Hide details view function
+        function hideDetails() {
+            // Hide details view and show main view
+            detailsView.classList.remove('show');
+            mainView.classList.remove('hidden');
+        }
 
-                <!-- Item 5 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Terms & Restrictions</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Self-referrals, fake accounts, and duplicate accounts are
-                      strictly prohibited. Spamming or using misleading
-                      advertising may result in account suspension. All referred
-                      users must be 18+ and comply with local gambling laws.
-                    </p>
-                  </div>
-                </details>
+        // Back button functionality
+        backBtn.addEventListener('click', hideDetails);
 
-                <!-- Item 6 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question"
-                      >Geographic Restrictions</span
-                    >
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Referral program is available in all supported countries.
-                      However, commission rates may vary by region due to local
-                      regulations. Check your account dashboard for
-                      region-specific rates.
-                    </p>
-                  </div>
-                </details>
-
-                <!-- Item 7 -->
-                <details class="faq-item">
-                  <summary class="faq-item__summary">
-                    <span class="faq-item__question">Dispute Resolution</span>
-                    <span class="faq-item__chevron" aria-hidden="true"></span>
-                  </summary>
-                  <div class="faq-item__content">
-                    <p>
-                      Any disputes regarding referral attribution or commission
-                      calculations must be reported within 7 days. Our support
-                      team will investigate and resolve issues within 5 business
-                      days.
-                    </p>
-                  </div>
-                </details>
-              </div>
-            </div>
-
-            <script>
-              (function () {
-                const nav = document.querySelector(".tab-navigation");
-                if (!nav) return;
-
-                // Convert mouse wheel vertical -> horizontal
-                nav.addEventListener(
-                  "wheel",
-                  (e) => {
-                    if (e.shiftKey) return;
-                    if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-                      e.preventDefault();
-                      nav.scrollLeft += e.deltaY;
-                    }
-                  },
-                  { passive: false }
-                );
-
-                // Click-drag to scroll
-                let isDown = false,
-                  startX = 0,
-                  startLeft = 0;
-                nav.addEventListener("mousedown", (e) => {
-                  isDown = true;
-                  nav.classList.add("dragging");
-                  startX = e.pageX;
-                  startLeft = nav.scrollLeft;
-                });
-                window.addEventListener("mousemove", (e) => {
-                  if (!isDown) return;
-                  e.preventDefault();
-                  nav.scrollLeft = startLeft - (e.pageX - startX);
-                });
-                window.addEventListener("mouseup", () => {
-                  isDown = false;
-                  nav.classList.remove("dragging");
-                });
-
-                // Touch drag (mobile)
-                let tX = 0,
-                  tLeft = 0;
-                nav.addEventListener(
-                  "touchstart",
-                  (e) => {
-                    const t = e.touches[0];
-                    tX = t.clientX;
-                    tLeft = nav.scrollLeft;
-                  },
-                  { passive: true }
-                );
-                nav.addEventListener(
-                  "touchmove",
-                  (e) => {
-                    const t = e.touches[0];
-                    nav.scrollLeft = tLeft - (t.clientX - tX);
-                  },
-                  { passive: true }
-                );
-
-                // When a tab is clicked, bring it into view (center-ish)
-                nav.addEventListener("click", (e) => {
-                  const item = e.target.closest(".tab-item");
-                  if (item)
-                    item.scrollIntoView({
-                      behavior: "smooth",
-                      inline: "center",
-                      block: "nearest",
-                    });
-                });
-              })();
-
-              // Tab functionality
-              function showTab(tabName) {
-                // Hide all tab contents
-                const tabContents = document.querySelectorAll(".tab-content");
-                tabContents.forEach((content) => {
-                  content.classList.remove("active");
-                });
-
-                // Remove active class from all tab items
-                const tabItems = document.querySelectorAll(".tab-item");
-                tabItems.forEach((item) => {
-                  item.classList.remove("active");
-                });
-
-                // Show selected tab content
-                const selectedTab = document.getElementById(tabName);
-                if (selectedTab) {
-                  selectedTab.classList.add("active");
-                }
-
-                // 👇 NEW: Activate the correct tab item without relying on `event`
-                const clickedTab = document.querySelector(
-                  `.tab-item[onclick*="${tabName}"]`
-                );
-                if (clickedTab) {
-                  clickedTab.classList.add("active");
-                }
-              }
-
-              // ✅ ADD this one line inside your existing DOMContentLoaded callback (at the top)
-              document.addEventListener("DOMContentLoaded", function () {
-                // Open Dashboard by default on first load
-                showTab("dashboard");
-
-                // ... keep your existing code below
-                // Ensure continuous visible scroll
-                scrollContainer.style.animationPlayState = "running";
-              });
-
-              // Simple continuous scroll - always visible content
-              const scrollContainer =
-                document.getElementById("scrollContainer");
-
-              // Sample data for generating new rows
-              const sampleNames = [
-                "Anana blue",
-                "Sakib Khan",
-                "Rima",
-                "John",
-                "Maria",
-                "Ahmed",
-                "Lisa",
-                "Rahman",
-                "Fatima",
-                "David",
-                "Nasir",
-                "Sumon",
-                "Rashid",
-                "Ayesha",
-                "Karim",
-                "Nadia",
-                "Rahim",
-                "Sadia",
-                "Hasan",
-                "Marium",
-                "Tanvir",
-                "Ruhul",
-                "Shiuli",
-                "Babul",
-                "Nasreen",
-                "Khalil",
-                "Rashida",
-                "Shamim",
-              ];
-
-              const sampleLetters = [
-                "T",
-                "G",
-                "S",
-                "B",
-                "D",
-                "C",
-                "H",
-                "F",
-                "R",
-                "P",
-                "M",
-                "L",
-                "K",
-                "A",
-                "N",
-              ];
-
-              function getRandomName() {
-                return sampleNames[
-                  Math.floor(Math.random() * sampleNames.length)
-                ];
-              }
-
-              function getRandomPoints() {
-                return Math.floor(Math.random() * 20) + 1;
-              }
-
-              function getRandomLetter() {
-                return sampleLetters[
-                  Math.floor(Math.random() * sampleLetters.length)
-                ];
-              }
-
-              function createNewRow() {
-                const row = document.createElement("div");
-                row.className = "live-row";
-
-                // Create 3 columns with random data
-                for (let i = 0; i < 3; i++) {
-                  const p = document.createElement("p");
-                  const name = getRandomName();
-                  const points = getRandomPoints();
-                  const letter = getRandomLetter();
-
-                  p.innerHTML = `${name} <b>+${points}</b><span>${letter}</span>`;
-                  row.appendChild(p);
-                }
-
-                return row;
-              }
-
-              // Start animation immediately when page loads
-              document.addEventListener("DOMContentLoaded", function () {
-                // Ensure continuous visible scroll
-                scrollContainer.style.animationPlayState = "running";
-
-                // Periodically add new content to keep it fresh
-                setInterval(() => {
-                  // Add new rows at the end
-                  for (let i = 0; i < 3; i++) {
-                    const newRow = createNewRow();
-                    scrollContainer.appendChild(newRow);
-                  }
-
-                  // Keep performance optimal by limiting total rows
-                  const rows = scrollContainer.querySelectorAll(".live-row");
-                  while (rows.length > 40) {
-                    rows[0].remove();
-                    rows = scrollContainer.querySelectorAll(".live-row");
-                  }
-                }, 8000); // Add new content every 8 seconds
-              });
-
-              // Slider section start
-              let currentSlide = 0;
-              const totalSlides = 4;
-
-              function updateSlider() {
-                const sliderTrack = document.getElementById("sliderTrack");
-                const dots = document.querySelectorAll(".dot");
-
-                // Move slider
-                sliderTrack.style.transform = `translateX(-${
-                  currentSlide * 25
-                }%)`;
-
-                // Update dots
-                dots.forEach((dot, index) => {
-                  if (index === currentSlide) {
-                    dot.classList.add("active");
-                  } else {
-                    dot.classList.remove("active");
-                  }
-                });
-              }
-
-              function nextSlide() {
-                currentSlide = (currentSlide + 1) % totalSlides;
-                updateSlider();
-              }
-
-              function previousSlide() {
-                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-                updateSlider();
-              }
-
-              function goToSlide(slideIndex) {
-                currentSlide = slideIndex;
-                updateSlider();
-              }
-
-              // Auto-play slider every 5 seconds
-              setInterval(nextSlide, 5000);
-
-              // Initialize slider
-              updateSlider();
-
-              // Copy functionality for input fields
-              document.addEventListener("click", function (e) {
-                if (
-                  e.target.classList.contains("send-btn") &&
-                  e.target.textContent === "Copy"
-                ) {
-                  const input = e.target.previousElementSibling;
-                  if (input && input.classList.contains("send-input-text")) {
-                    input.select();
-                    document.execCommand("copy");
-
-                    // Provide visual feedback
-                    const originalText = e.target.textContent;
-                    e.target.textContent = "Copied!";
+        // Add click functionality to copy icons in table
+        document.querySelectorAll('.copy-icon').forEach(icon => {
+            icon.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const codeText = this.previousSibling.textContent.trim();
+                navigator.clipboard.writeText(codeText).then(() => {
+                    this.style.background = '#2ecc71';
+                    showToast('Code copied to clipboard!');
                     setTimeout(() => {
-                      e.target.textContent = originalText;
-                    }, 2000);
-                  }
+                        this.style.background = '#555555';
+                    }, 1000);
+                }).catch(err => {
+                    console.error('Failed to copy text: ', err);
+                });
+            });
+        });
+
+        // Add click functionality to referral columns (0 >)
+        document.querySelectorAll('.col-referrals').forEach((col) => {
+            col.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Get data from the clicked row
+                const rowData = {
+                    code: this.getAttribute('data-code'),
+                    link: this.getAttribute('data-link'),
+                    date: this.getAttribute('data-date')
+                };
+
+                // Show details view with this data
+                showDetails(rowData);
+            });
+        });
+
+        // Copy functionality for details page
+        function copyToClipboard(type) {
+            let textToCopy = '';
+            let targetElement = null;
+
+            if (type === 'code') {
+                textToCopy = detailCode.textContent;
+                targetElement = detailCode.nextElementSibling;
+            } else if (type === 'link') {
+                textToCopy = detailLink.textContent;
+                targetElement = detailLink.nextElementSibling;
+            }
+
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                if (targetElement) {
+                    targetElement.style.background = '#2ecc71';
+                    setTimeout(() => {
+                        targetElement.style.background = '#555555';
+                    }, 1000);
                 }
-              });
-            </script>
-          </section>
-        </div>
-      </div>
-    </div>
-  </body>
+                showToast('Copied to clipboard!');
+            }).catch(err => {
+                console.error('Failed to copy text: ', err);
+            });
+        }
+
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.textContent = message;
+            toast.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                background: #2ecc71;
+                color: white;
+                padding: 10px 20px;
+                border-radius: 8px;
+                font-weight: bold;
+                z-index: 1000;
+                opacity: 0;
+                transition: opacity 0.3s ease;
+            `;
+            
+            document.body.appendChild(toast);
+            
+            setTimeout(() => toast.style.opacity = '1', 100);
+            
+            setTimeout(() => {
+                toast.style.opacity = '0';
+                setTimeout(() => document.body.removeChild(toast), 300);
+            }, 2000);
+        }
+
+        // Handle keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && detailsView.classList.contains('show')) {
+                hideDetails();
+            }
+        });
+    </script>
+</body>
 </html>
