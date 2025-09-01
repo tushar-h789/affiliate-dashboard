@@ -11,12 +11,9 @@
     }
 
     .total-reward {
-    
       font-family: Arial, sans-serif;
       display: flex;
-      
-      /* justify-content: center; */
-      padding: 8px 14px;
+      padding: 8px 0px;
     }
 
     .total-card {

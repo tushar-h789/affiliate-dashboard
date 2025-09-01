@@ -28,11 +28,12 @@
 }
 
 .faq {
-  padding: max(24px, env(safe-area-inset-top)) 8px 32px;
+  /* padding: max(24px, env(safe-area-inset-top)) 8px 32px; */
+  padding: 20px;
   display: flex;
   justify-content: center;
   background-color: var(--btn-bg);
-  margin: 14px; /* Changed from 12px to match other sections */
+  margin: 14px 0px; /* Changed from 12px to match other sections */
   border-radius: 12px;
   /* Removed width: 100% to match other sections */
 }
@@ -51,17 +52,17 @@
 
 /* Card panel */
 .faq__panel {
-  background: var(--faq-bg);
-  border: 1px solid var(--border-light);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  /* background: var(--faq-bg); */
+  /* border: 1px solid var(--border-light); */
+  /* border-radius: var(--radius); */
+  /* box-shadow: var(--shadow); */
 }
 
 /* ----------- Item ----------- */
 .faq-item {
   border-radius: 12px;
   overflow: hidden;
-  background-color: #2e3233;
+  /* background-color: #2e3233; */
   margin-bottom: 8px;
 }
 

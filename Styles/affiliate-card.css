@@ -201,7 +201,7 @@ body {
    ================================ */
 .affiliate-card-bdt {
   background: var(--card-bg-mid);
-  margin: 14px;
+  /* margin: 14px; */
   padding: 8px 20px;
   border-radius: 12px;
   text-align: center;
