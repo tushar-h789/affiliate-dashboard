@@ -166,9 +166,8 @@
   margin-top: 10px;
   display: flex;
   flex-direction: column;
-  align-items: center; 
+  align-items: center;
 }
-
 
 .rewards-and-rates .rar-caret {
   display: inline-block;
@@ -341,10 +340,117 @@
   color: var(--accent-color);
 }
 
+/* ===== Referral Reward ===== */
+.referral-reward {
+  color: var(--text-color, #e9e9e9);
+  margin-top: 20px;
+}
+
+/* outer card like screenshot */
+.referral-reward .rr-card {
+  background: var(--input-bg);
+  border: 1px solid var(--border-light, rgba(255, 255, 255, 0.1));
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.referral-reward .rr-header h2 {
+  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-primary, #fff);
+}
+.referral-reward .rr-divider {
+  height: 1px;
+  width: 100%;
+  background: var(--border-light, rgba(255, 255, 255, 0.1));
+  opacity: 0.6;
+  margin-bottom: 10px;
+}
+
+/* list */
+.referral-reward .rr-steps {
+  display: grid;
+  gap: 10px;
+}
+
+/* pill row card */
+.referral-reward .rr-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 12px;
+  align-items: center;
+  /* background: var(--link-bg, #232626); */
+  border: 1px solid var(--border-light, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  padding: 16px 14px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* big green number (no box) */
+.referral-reward .rr-num {
+  line-height: 1;
+  font-size: 34px; /* close to screenshot */
+  font-weight: 800;
+  color: var(--accent-color, #00ff88);
+  width: 42px; /* keeps consistent spacing */
+  text-align: center;
+}
+
+.referral-reward .rr-body {
+  display: grid;
+  gap: 4px;
+}
+
+/* title text */
+.referral-reward .rr-title {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.25;
+  color: var(--text-primary, #fff);
+  font-weight: 800; /* bolder like screenshot */
+}
+.referral-reward .rr-strong {
+  font-weight: 900;
+}
+.referral-reward .rr-accent {
+  color: var(--accent-color, #00ff88);
+}
+
+/* description */
+.referral-reward .rr-desc {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.8));
+}
+
 /* responsive */
 @media (max-width: 768px) {
   .rewards-and-rates .rar-container {
     grid-template-columns: 1fr;
+  }
+  .referral-reward .rr-card {
+    padding: 14px;
+    text-align: start;
+  }
+  .referral-reward .rr-header h2 {
+    font-size: 15px;
+  }
+
+  .referral-reward .rr-step {
+    padding: 13px 12px;
+    gap: 10px;
+  }
+  .referral-reward .rr-num {
+    font-size: 28px;
+    width: 36px;
+    font-weight: 700;
+  }
+  .referral-reward .rr-title {
+    font-size: 16px;
+  }
+  .referral-reward .rr-desc {
+    font-size: 13px;
   }
 }
 
@@ -356,5 +462,34 @@
   .rewards-and-rates h2 {
     font-size: 14px;
     font-weight: 500;
+  }
+  .referral-reward .rr-card {
+    padding: 12px;
+    text-align: start;
+  }
+  .referral-reward .rr-header h2 {
+    font-size: 14px;
+    text-align: start;
+  }
+
+  /* stack number above text, centered */
+  .referral-reward .rr-step {
+    text-align: start;
+    gap: 12px;
+    padding: 12px 10px;
+  }
+  .referral-reward .rr-num {
+    width: auto;
+    font-size: 42px;
+    margin: 0 auto 2px;
+    font-weight: 500;
+  }
+  .referral-reward .rr-title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .referral-reward .rr-desc {
+    font-size: 12px;
+
   }
 }
