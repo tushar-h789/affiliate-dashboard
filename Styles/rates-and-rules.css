@@ -424,6 +424,110 @@
   color: var(--text-secondary, rgba(255, 255, 255, 0.8));
 }
 
+/* uses your existing :root variables; adds only what we need */
+.rates-and-rules {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  /* padding: 24px; */
+}
+
+.rar-card {
+  width: 100%;
+
+  border: 1px solid var(--border-light, rgba(255, 255, 255, 0.08));
+  border-radius: 12px;
+  box-shadow: 0 10px 30px var(--shadow-primary, rgba(0, 0, 0, 0.5));
+  padding: 12px;
+}
+
+/* Head row */
+.rar-head {
+  list-style: none;
+  margin: 0;
+  padding: 10px 14px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr;
+  gap: 8px;
+  color: var(--text-secondary, rgba(255, 255, 255, 0.85));
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+.rar-head li {
+  white-space: nowrap;
+}
+
+/* Body rows */
+.rar-body {
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.rar-row {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1.2fr;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  /* background: var(--content-bg, rgba(255,255,255,.05));
+    border: 1px solid var(--border-light, rgba(255,255,255,.08)); */
+  border-radius: 8px;
+  color: var(--text-color, #e9e9e9);
+  font-size: 14px;
+}
+
+.rar-row + .rar-row {
+  margin-top: 0;
+}
+
+.rar-col.level {
+  color: var(--text-primary, #fff);
+  font-weight: 600;
+}
+.rar-col.wager {
+  color: var(--text-primary);
+}
+.rar-col.unlock {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  justify-self: start;
+}
+
+/* Coin icon */
+.coin {
+  width: 28px;
+  height: 28px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, #ffd64d, #f5b700 70%, #b88400);
+  color: #1c1c1c;
+  font-weight: 900;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+  box-shadow: inset 0 2px 3px rgba(255, 255, 255, 0.35),
+    inset 0 -2px 3px rgba(0, 0, 0, 0.25), 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.amount {
+  color: var(--invite-friend-color, #24ee87);
+  font-weight: 800;
+}
+
+/* Hover (desktop niceties) */
+@media (hover: hover) and (pointer: fine) {
+  .rar-row:hover {
+    transform: translateY(-1px);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+  }
+}
+
 /* responsive */
 @media (max-width: 768px) {
   .rewards-and-rates .rar-container {
@@ -452,6 +556,19 @@
   .referral-reward .rr-desc {
     font-size: 13px;
     font-weight: 400;
+  }
+  /* .rar-card { max-width: 520px; } */
+  .rar-head,
+  .rar-row {
+    grid-template-columns: 1fr 0.9fr 1.1fr;
+    padding: 10px 12px;
+  }
+  .rar-row {
+    font-size: 13px;
+  }
+  .coin {
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -492,6 +609,25 @@
   .referral-reward .rr-desc {
     font-size: 12px;
     font-weight: 400;
-
+  }
+  .rar-head,
+  .rar-row {
+    grid-template-columns: 1fr 0.8fr 1fr;
+    gap: 6px;
+    padding: 8px 10px;
+  }
+  .rar-head {
+    font-size: 11px;
+  }
+  .rar-row {
+    font-size: 12px;
+  }
+  .coin {
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+  }
+  .amount {
+    font-weight: 800;
   }
 }
