@@ -30,7 +30,7 @@
 body {
   /* margin: 18px 4px; */
   font-family: var(--font-family-primary);
-  background: var(--body-bg);
+  /* background: var(--body-bg); */
   height: auto;
   overflow-x: hidden;
 }

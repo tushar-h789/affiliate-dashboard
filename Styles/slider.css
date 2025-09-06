@@ -8,6 +8,7 @@
   --content-bg: rgba(255, 255, 255, 0.05);
   --input-bg: rgba(255, 255, 255, 0.1);
 
+  --body-bg: #323738;
   --tab-gap: 8px;
 
   /* Text Colors */
@@ -74,6 +75,7 @@
   /* margin-left: 14px; */
   /* margin-right: 14px; */
   border-radius: 8px;
+  margin-top: 40px;
 }
 
 .slider-track {
@@ -147,7 +149,7 @@
   align-items: center;
   padding: 15px;
   gap: 8px;
-  background: var(--dots-bg);
+  /* background: var(--dots-bg); */
 }
 
 .dot {

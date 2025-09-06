@@ -20,64 +20,69 @@
     <div class="container">
       <!-- total reward section -->
 
-      <div class="affiliate card">
+      <div class="">
         <!-- Header with Back Arrow -->
-        <div class="card-header">
-          <button class="back-btn">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-            </svg>
-          </button>
-          <h2>Affiliate</h2>
-        </div>
+        <div class="card-header affiliate card">
+  <button class="back-btn" aria-label="Go back">
+    <span class="icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="16" height="16" focusable="false" role="img">
+        <path d="M15.41 7.41 14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+      </svg>
+    </span>
+  </button>
+  <h2>Affiliate</h2>
+</div>
 
-        <!-- Slider Section -->
-        <div class="slider-container">
-          <div class="slider-track" id="sliderTrack">
-            <!-- Slide 1 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-01.png" alt="slider 1" />
+
+        <div class="affiliate card">
+          <!-- Slider Section -->
+          <div class="slider-container">
+            <div class="slider-track" id="sliderTrack">
+              <!-- Slide 1 -->
+              <div class="slide">
+                <!-- Replace with your actual image -->
+                <div class="slide-placeholder">
+                  <img src="assets/image/slider-01.png" alt="slider 1" />
+                </div>
+              </div>
+
+              <!-- Slide 2 -->
+              <div class="slide">
+                <!-- Replace with your actual image -->
+                <div class="slide-placeholder">
+                  <img src="assets/image/slider-02.jpg" alt="slider 2" />
+                </div>
+              </div>
+
+              <!-- Slide 3 -->
+              <div class="slide">
+                <!-- Replace with your actual image -->
+                <div class="slide-placeholder">
+                  <img src="assets/image/slider-03.jpg" alt="slider 3" />
+                </div>
+              </div>
+
+              <!-- Slide 4 -->
+              <div class="slide">
+                <!-- Replace with your actual image -->
+                <div class="slide-placeholder">
+                  <img src="assets/image/slider-04.webp" alt="slider 4" />
+                </div>
               </div>
             </div>
 
-            <!-- Slide 2 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-02.jpg" alt="slider 2" />
-              </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-03.jpg" alt="slider 3" />
-              </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="slide">
-              <!-- Replace with your actual image -->
-              <div class="slide-placeholder">
-                <img src="assets/image/slider-04.webp" alt="slider 4" />
-              </div>
-            </div>
+            <!-- Navigation Arrows -->
+            <!-- <div class="nav-arrow left" onclick="previousSlide()">❮</div>
+          <div class="nav-arrow right" onclick="nextSlide()">❯</div> -->
           </div>
 
-          <!-- Navigation Arrows -->
-          <!-- <div class="nav-arrow left" onclick="previousSlide()">❮</div>
-          <div class="nav-arrow right" onclick="nextSlide()">❯</div> -->
-        </div>
-
-        <!-- Dots Navigation -->
-        <div class="dots-container" id="dotsContainer">
-          <div class="dot active" onclick="goToSlide(0)"></div>
-          <div class="dot" onclick="goToSlide(1)"></div>
-          <div class="dot" onclick="goToSlide(2)"></div>
-          <div class="dot" onclick="goToSlide(3)"></div>
+          <!-- Dots Navigation -->
+          <div class="dots-container" id="dotsContainer">
+            <div class="dot active" onclick="goToSlide(0)"></div>
+            <div class="dot" onclick="goToSlide(1)"></div>
+            <div class="dot" onclick="goToSlide(2)"></div>
+            <div class="dot" onclick="goToSlide(3)"></div>
+          </div>
         </div>
 
         <!-- Tab Navigation (Scrollable Menu Bar) -->
