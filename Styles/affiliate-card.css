@@ -6,7 +6,7 @@
   --card-bg-top: #1c3b2c; /* card gradient top (slightly lighter) */
   --card-bg-mid: #323738; /* middle shade */
   --card-bg-bottom: #232626; /* card gradient bottom (darker) */
-  --card-bg: #3B5457;
+  --card-bg: #3b5457;
   --card-radius: 16px; /* border radius */
 
   --header-bg: #232626; /* slightly different from body */
@@ -30,11 +30,11 @@
   --btn-bg-hover: #444444;
 
   /* adjust these to change sizes easily */
-  --arrow-box: 36px;   /* background box / padding area */
-  --arrow-icon: 16px;  /* actual SVG arrow size (kept fixed so it doesn't shrink) */
+  --arrow-box: 36px; /* background box / padding area */
+  --arrow-icon: 16px; /* actual SVG arrow size (kept fixed so it doesn't shrink) */
   --arrow-radius: 6px;
-  --arrow-bg: #f0f0f0;      /* example bg -- override with your var if already set */
-  --text-muted: #333;       /* example fill color */
+  --arrow-bg: #f0f0f0; /* example bg -- override with your var if already set */
+  --text-muted: #333; /* example fill color */
 }
 
 /* ================================
@@ -74,7 +74,7 @@ body {
 /* ================================
          Header
          ================================ */
-.affiliate .card-header {
+/* .affiliate .card-header {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -84,38 +84,54 @@ body {
   background: var(--header-bg);
   border-top-left-radius: var(--card-radius);
   border-top-right-radius: var(--card-radius);
+} */
+.affiliate .card-header {
+  position: relative;
+  margin-bottom: 20px;
+  padding: 12px 0;
+  background: var(--header-bg);
+  border-top-left-radius: var(--card-radius);
+  border-top-right-radius: var(--card-radius);
 }
 
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.affiliate-text {
+  margin-top: 20px;
+}
+
+/* container / layout */
+.affiliate {
+  position: relative;
+}
+
+/* button: keep a comfortable clickable area */
 /* .affiliate .back-btn {
   position: absolute;
   left: 0;
+  top: 50%;
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 5px;
-}
-
-.affiliate .back-btn svg {
-  width: 16px;
-  height: 16px;
-  fill: var(--text-muted);
-  background: var(--arrow-bg);
-  margin-left: 20px;
-  border-radius: 4px;
+  padding: 8px; 
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 } */
- /* container / layout */
-.affiliate { position: relative; }
-
-/* button: keep a comfortable clickable area */
 .affiliate .back-btn {
   position: absolute;
-  left: 0;
+  left: 12px; /* small gap from edge */
   top: 50%;
-  transform: translateY(-50%); /* vertically center with heading if desired */
+  transform: translateY(-50%);
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px; /* outer clickable area; adjust if you want more space around the colored box */
+  padding: 8px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -131,7 +147,7 @@ body {
   background: var(--arrow-bg);
   border-radius: var(--arrow-radius);
   /* optional: add subtle transition */
-  transition: background .15s, transform .08s;
+  transition: background 0.15s, transform 0.08s;
 }
 
 /* actual SVG stays fixed so the arrow doesn't shrink */
@@ -140,7 +156,7 @@ body {
   height: var(--arrow-icon);
   fill: var(--text-muted);
   display: block; /* avoids inline whitespace issues */
-  margin: 0;      /* remove previous margin-left */
+  margin: 0; /* remove previous margin-left */
 }
 
 /* small hover/focus affordance */
@@ -151,7 +167,15 @@ body {
   /* background: color-mod(var(--arrow-bg) lightness(-5%)); */
 }
 
+/* .affiliate .card-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--header-text);
+  margin: 0;
+} */
 .affiliate .card-header h2 {
+  flex: 1;
+  text-align: center;
   font-size: 16px;
   font-weight: 600;
   color: var(--header-text);
